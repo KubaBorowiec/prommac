@@ -25,7 +25,11 @@ app.controller("postController",["$scope","$http","$routeParams","$sce",function
 		if(t.post=s[0],t.content=e.trustAsHtml(s[0].content),console.log(s[0].id),s[0].id>0){var i=o.filter(function(t){return t.id==s[0].id-1});
 		t.vsBefore=!0,t.before=i[0].slug}if(s[0].id<o.length-1){var f=o.filter(function(t){return t.id==parseInt(s[0].id)+1});
 		t.vsAfter=!0,t.after=f[0].slug}},function(t){})}]);
-app.controller("startController",["$scope",function(e){e.slides=[{id:"0",image:"img/img00.jpg",text:"Image 01",href:"#/players"},
-	{id:"1",image:"img/img01.jpg",text:"Image 02",href:"#/news/lukasz-klingier"}],e.myInterval=1e3}]);
+app.controller("startController",["$scope",function(e)
+  {e.slides=[{id:"0",
+	image:"../../app/images/img00.jpg",
+	text:"Image 01",href:"#/players"},
+	{id:"1",image:"img/img01.jpg",text:"Image 02",href:"#/news/lukasz-klingier"}],
+	e.myInterval=1e3}]);
 app.directive("slider",["$timeout",function(e)
-	{return{restrict:"AE",replace:!0,templateUrl:"views/slider.html"}}]);
+	{return{restrict:"AE",replace:!0,templateUrl:"../../build/templates/view/slider.html"}}]);

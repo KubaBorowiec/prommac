@@ -1,0 +1,6 @@
+$ cat .gitignore
+node_modules
+package.json
+.sass-cache/
+debug.log
+prommac

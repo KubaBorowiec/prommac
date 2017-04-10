@@ -1,0 +1,19 @@
+<h2>Aktualności</h2>
+<div class="row">
+    <div class="col-md-8">
+         <div class="id-{{post.id}} posts" ng-repeat="post in posts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:'date':true">
+	         <header>
+		         <div class="clearfix">
+		         	<div class="pull-left">Data: <span>{{post.date | date:"MM/dd/yyyy" }}</span></div>
+		         </div>
+		         <h3>{{post.title}}</h3>
+		         <div class="cat cat-{{post.cat}}">Kategoria: <span> {{post.cat}}</span></div>
+	         </header>
+	         <article>
+	         	<img ng-src="img/posts/{{post.src}}">
+	         </article>
+	         <footer class="grey clearfix"><div class="pull-left">Autor: <span>{{post.author}}</span></div><a class="pull-right" ng-href="#news/{{post.slug}}"><span class="readmore">Czytaj więcej</span></a></footer>
+         </div>
+         <pagination  max-size="maxSize" page="currentPage" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></pagination>
+    </div>
+</div>

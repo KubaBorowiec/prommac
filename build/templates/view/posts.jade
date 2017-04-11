@@ -4,9 +4,9 @@ div(class="row")
 			//-pagination(max-size="maxSize" page="currentPage" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage")
 	div(class="col-md-12")
 		div(class="sort")
-					button(ng-click="sortBy('title')")
+					button(ng-click="sortBy('data')")
 						| Data
-					button(ng-click="sortBy('date')")
+					button(ng-click="sortBy('title')")
 						| Tytuł
 					button(ng-click="myFilter = {cat:'walka'}")
 						| Walka
@@ -14,7 +14,7 @@ div(class="row")
 						| Media
 					button(ng-click="myFilter = {cat:'zawodnicy'}")
 						| Zawodnicy
-					button(ng-click="myFilter = ''")
+					button(ng-click="myFilter ='' ")
 						| Wszystkie
 		div(class="id-{{post.id}} posts col-xs-6" ng-repeat="post in posts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:sorting | filter:myFilter")
 			header

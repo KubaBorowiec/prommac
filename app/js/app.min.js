@@ -25,7 +25,6 @@ app.controller("newsController",["$scope","$http","$log",function($scope,$http,$
 	$scope.sortBy = function(sorting) {
      $scope.sorting = sorting;
     };
-
 	$scope.itemsPerPage=20,
 	$scope.currentPage=1,
 	$scope.maxSize=5,

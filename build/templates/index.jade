@@ -5,7 +5,7 @@ html(lang='pl')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		script( src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous")
 		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
-		link(href='app/css/style.css', type='text/css', rel='stylesheet')
+		link(href='css/style.css', type='text/css', rel='stylesheet')
 	body(data-ng-app="PrommacApp")
 		main
 			header
@@ -24,12 +24,12 @@ html(lang='pl')
 							a(ng-class="{ active: isActive('/media')}" href="#/media") Media o nas
 						li
 							a(ng-class="{ active: isActive('/contact')}" href="#/contact") Kontakt
-			section(data-ng-view)
+			section(ng-view)
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js")
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js")
 	script(type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js")
 	script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js")
-	script(src="build/js/all.js")
+	script(src="js/app.min.js")
 
 

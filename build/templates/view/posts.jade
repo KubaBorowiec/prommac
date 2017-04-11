@@ -1,0 +1,25 @@
+h2
+	| Aktualności
+div(class="row")
+	pagination(max-size="maxSize" page="currentPage" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage")
+	div(class="col-md-12")
+		div(class="id-{{post.id}} posts col-xs-6" ng-repeat="post in posts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:'date':true")
+			header
+				div(class="clearfix")
+				div(class="pull-left")
+					| Data: 
+				span 
+					| {{post.date | date:"MM/dd/yyyy" }}
+				h3 {{post.title}}		        
+				div(class="cat cat-{{post.cat}}") 
+					| Kategoria: 
+					span 
+					| {{post.cat}}
+			article
+				img(ng-src="img/posts/{{post.src}}")
+			footer(class="grey clearfix")
+				div(class="pull-left")
+					| Autor: 
+					span {{post.author}}
+					a(class="pull-right" ng-href="#news/{{post.slug}}")
+						span(class="readmore") Czytaj więcej

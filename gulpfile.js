@@ -1,6 +1,6 @@
 
 
-var gulp = require('gulp'),
+  var gulp = require('gulp'),
   browserSync = require('browser-sync'),
   reload = browserSync.reload,
   plumber = require('gulp-plumber'),
@@ -27,10 +27,10 @@ function errorlog(err){
 // ///////////////////////////////////////////////
 
 gulp.task('scripts', function() {
-  return gulp.src('./build/js/**/*.js')
+  return gulp.src('./build/js/*.js')
     .pipe(plumber())
-    .pipe(concat('all.js'))
-    .pipe(uglify())
+   /* .pipe(concat('all.js'))*/
+   /* .pipe(uglify())*/
     .pipe(rename('app.min.js'))   
     .pipe(gulp.dest('./app/js/'))
     .pipe(reload({stream:true}));
@@ -81,7 +81,7 @@ gulp.task('js', function(){
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./app/"
         }
     });
 });
@@ -92,8 +92,9 @@ gulp.task('browser-sync', function() {
 
 gulp.task ('watch', function(){ 
   gulp.watch('build/sass/**/*.scss', ['compass']);
-  gulp.watch('build/templates/**/*.jade', ['jade']);
-  // gulp.watch('build/js/**/*.js', ['scripts']); //for building
+  gulp.watch('build/templates/index.jade', ['jade']);
+  gulp.watch('build/templates/view/*.jade', ['jade-templates']);
+  gulp.watch('build/js/**/*.js', ['scripts']); 
   gulp.watch('index.html', ['html']);
   gulp.watch('app/css/*.css', ['css']);
   gulp.watch('app/js/*.js', ['js']);
@@ -103,12 +104,19 @@ gulp.task ('watch', function(){
 // JADE
 /////////////////////////////////////////////////
 gulp.task('jade', function() {
-  gulp.src('build/templates/*.jade')
+    gulp.src('build/templates/index.jade')
     .pipe(plumber())
     .pipe(jade())
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./app/'))
+    
+});
+gulp.task('jade-templates', function() {
+    gulp.src('build/templates/view/*.jade')
+    .pipe(plumber())
+    .pipe(jade())
+    .pipe(gulp.dest('./app/templates'))
     
 });
 
-gulp.task('default', ['html','watch','js','css','compass',/*'scripts'*/'jade','browser-sync']);
+gulp.task('default', ['html','watch','js','css','compass','scripts','jade','jade-templates','browser-sync']);
 

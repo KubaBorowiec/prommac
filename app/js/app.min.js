@@ -25,11 +25,12 @@ app.controller("newsController",["$scope","$http","$log",function($scope,$http,$
 	$scope.sortBy = function(sorting) {
      $scope.sorting = sorting;
     };
-	$scope.itemsPerPage=20,
-	$scope.currentPage=1,
-	$scope.maxSize=5,
-	$scope.bigTotalItems=175,
-	$scope.bigCurrentPage=1}]);
+    $scope.setBegin = function(last) {
+     $scope.begin = (last * $scope.itemsPerPage);
+    };
+    $scope.begin = 0;
+	$scope.itemsPerPage = 4
+}]);
 app.controller("playersController",["$scope",function($log){
 
 }]);

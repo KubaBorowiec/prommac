@@ -26,8 +26,12 @@ app.controller("newsController",["$scope","$http","$log",function($scope,$http,$
      $scope.sorting = sorting;
     };
     $scope.setBegin = function(last) {
-     $scope.begin = (last * $scope.itemsPerPage);
+     	$scope.begin = (last * $scope.itemsPerPage);
     };
+    $scope.getNumber = function(num) {
+    	console.log(Array(num));
+    	return new Array(num);   
+	}
     $scope.begin = 0;
 	$scope.itemsPerPage = 4
 }]);

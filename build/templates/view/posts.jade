@@ -16,7 +16,7 @@ div(class="row")
 						| Wszystkie
 		div(class="pagination-main")
 				ul
-					li(ng-repeat="a in range(5)")
+					li(ng-repeat="i in getNumber(totalItems)")
 					|	{{ $index }}
 		div(class="id-{{post.id}} posts col-xs-6" ng-repeat="post in posts | orderBy:sorting | filter:myFilter | limitTo:itemsPerPage:begin")
 			header

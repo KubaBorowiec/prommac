@@ -7,24 +7,46 @@ app.config(["$routeProvider",function($routeProvider){
 	$routeProvider.when("/about",{controller:"aboutController",templateUrl:"templates/about.html"}),
 	$routeProvider.when("/players",{controller:"playersController",templateUrl:"templates/players.html"}),
 	$routeProvider.otherwise({redirectTo:"/"})}]);
-app.controller("aboutController",["$scope",function(o){}]);
+app.controller("aboutController",["$scope",function($scope){}]);
 app.controller("headerController",["$scope","$location",function(o,n)
 	{o.isActive=function(o){return o===n.path()}}]);
+
 app.controller("mediaController",["$scope",function(o){
 
 }]);
-app.controller("newsController",["$scope","$http","$log",function(t,e,o)
-	{e({method:"GET",url:"data/posts.json"}).then(function(e)
-	{t.posts=e.data.posts,t.totalItems=t.posts.length},function(t){}),
-	t.maxSize=5,t.itemsPerPage=8,t.currentPage=1,t.maxSize=5,t.bigTotalItems=175,t.bigCurrentPage=1}]);
-app.controller("playersController",["$scope",function(o){
+
+app.controller("newsController",["$scope","$http","$log",function($scope,$http,$log)
+	{$http({method:"GET",url:"data/posts.json"}).then(function($http)
+	{$scope.posts=$http.data.posts,$scope.totalItems=$scope.posts.length},function($scope){}),
+	$scope.maxSize=10,
+	$scope.sorting='title',
+	$scope.reverse=true,
+	$scope.myFilter='',
+	$scope.sortBy = function(sorting) {
+     $scope.sorting = sorting;
+    };
+
+	$scope.itemsPerPage=20,
+	$scope.currentPage=1,
+	$scope.maxSize=5,
+	$scope.bigTotalItems=175,
+	$scope.bigCurrentPage=1}]);
+app.controller("playersController",["$scope",function($log){
 
 }]);
-app.controller("postController",["$scope","$http","$routeParams","$sce",function(t,n,r,e)
-	{n({method:"GET",url:"data/posts.json"}).then(function(n){var o=n.data.posts,s=o.filter(function(t){return t.slug==r.name});
-		if(t.post=s[0],t.content=e.trustAsHtml(s[0].content),console.log(s[0].id),s[0].id>0){var i=o.filter(function(t){return t.id==s[0].id-1});
-		t.vsBefore=!0,t.before=i[0].slug}if(s[0].id<o.length-1){var f=o.filter(function(t){return t.id==parseInt(s[0].id)+1});
-		t.vsAfter=!0,t.after=f[0].slug}},function(t){})}]);
+
+app.controller("postController",["$scope","$http","$routeParams","$sce",function($scope,$http,$routeParams,$sce)
+	{$http({method:"GET",url:"data/posts.json"}).then(function($http){var o=$http.data.posts,s=o.filter(function($scope)
+		{return $scope.slug==$routeParams.name});
+		if($scope.post=s[0],$scope.content=$sce.trustAsHtml(s[0].content),console.log(s[0].id),s[0].id>0)
+		{var i=o.filter(function($scope)
+		{return $scope.id==s[0].id-1});
+		$scope.vsBefore=!0,$scope.before=i[0].slug}
+		if(s[0].id<o.length-1)
+		{var f=o.filter(function($scope){return $scope.id==parseInt(s[0].id)+1});
+		$scope.vsAfter=!0,$scope.after=f[0].slug}},
+		function($scope){})}]);
+
 app.controller("startController",["$scope",function(e)
   {e.slides=[{id:"0",
 	image:"images/img01.jpg",

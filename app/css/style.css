@@ -445,3 +445,7 @@ template {
 [hidden] {
   display: none;
 }
+
+.posts {
+  border: 1px solid #000;
+}

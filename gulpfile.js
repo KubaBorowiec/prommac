@@ -108,6 +108,7 @@ gulp.task('jade', function() {
     .pipe(plumber())
     .pipe(jade())
     .pipe(gulp.dest('./app/'))
+    .pipe(reload({stream:true}));
     
 });
 gulp.task('jade-templates', function() {
@@ -115,6 +116,7 @@ gulp.task('jade-templates', function() {
     .pipe(plumber())
     .pipe(jade())
     .pipe(gulp.dest('./app/templates'))
+    .pipe(reload({stream:true}));
     
 });
 

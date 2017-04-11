@@ -1,9 +1,22 @@
 h2
 	| Aktualności
 div(class="row")
-	pagination(max-size="maxSize" page="currentPage" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage")
+			//-pagination(max-size="maxSize" page="currentPage" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage")
 	div(class="col-md-12")
-		div(class="id-{{post.id}} posts col-xs-6" ng-repeat="post in posts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:'date':true")
+		div(class="sort")
+					button(ng-click="sortBy('title')")
+						| Data
+					button(ng-click="sortBy('date')")
+						| Tytuł
+					button(ng-click="myFilter = {cat:'walka'}")
+						| Walka
+					button(ng-click="myFilter = {cat:'media'}")
+						| Media
+					button(ng-click="myFilter = {cat:'zawodnicy'}")
+						| Zawodnicy
+					button(ng-click="myFilter = ''")
+						| Wszystkie
+		div(class="id-{{post.id}} posts col-xs-6" ng-repeat="post in posts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:sorting | filter:myFilter")
 			header
 				div(class="clearfix")
 				div(class="pull-left")
@@ -16,7 +29,7 @@ div(class="row")
 					span 
 					| {{post.cat}}
 			article
-				img(ng-src="img/posts/{{post.src}}")
+				img(ng-src="zimages/posts/{{post.src}}")
 			footer(class="grey clearfix")
 				div(class="pull-left")
 					| Autor: 

@@ -4,9 +4,9 @@
     "content":"\"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\""},
     {"id":"2","slug":"lukasz-klingier","title":"Łukasz klingier przeciwnikiem Tomasza Kondraciuka","author":"Kamil S","src":"post_03.jpg","date":"2016-03-02","cat":"zawodnik",
 	"content":"<p>Nie ma to jak rozpocząć rok mocnym uderzeniem. Możemy już ogłosić pierwsze zestawienie naszej gali. Tomasz Kondraciuk zmierzy się w nim z niepokonanym w zawodowym oktagonie Łukaszem Klingerem.</p><p> Łukasz przebojem wdarł się do czołowej dziesiątki najlepszych zawodników wagi półciężkiej w Polsce. W ostatnim roku stoczył aż pięć pojedynków i wszystkie zakończył przed czasem, nokautując m.in. Adama Oknińskiego i zdobywając na gali PLMMA pas Uni Sportów Walki. Mieszkający i trenujący na co dzień w angielskim Northampton zawodnik, posiada również pas organizacji TKMMA.</p><p>W ostatnim wywiadzie Łukasz oznjamił, iż jeszcze w tym roku chciałby się zmierzyć z Tomaszem Narkunem. Jego sportowe ambicje nie kończą się jednak na tym, a styl w jaki rozstrzyga swoje walki upoważnia go do takich deklaracji.Starcie Kondraciuka z Klingerem będzie konfrontacją dwóch topowych prospektów wagi półciężkiej w Polsce, którzy zamierzają wedrzeć się do absolutnej czołówki swojej dywizji.</p>"},
-    {"id":"3","slug":"mistrzostwa-polski","title":"Mistrzostwa polski","author":"Kuba Sroczynski","src":"post_01.jpg","date":"2015-12-03","cat":"media"},
+    {"id":"3","slug":"mistrzostwa-polski","title":"Mistrzostwa polski","author":"Kuba Sroczynski","src":"post_01.jpg","date":"2015-12-03","cat":"zawodnicy"},
     {"id":"4","slug":"wielka-gala","title":"Wielka gala PROMMAC-u","author":"Joanna Bożek","src":"post_01.jpg","date":"2014-01-45","cat":"zawodnik"},
-    {"id":"5","slug":"post-6","title":"Post 1","author":"Generał X","src":"post_01.jpg","date":"2014-12-12","cat":"walka"},
+    {"id":"5","slug":"post-6","title":"Post 1","author":"Generał X","src":"post_01.jpg","date":"2014-12-12","cat":"media"},
     {"id":"6","slug":"post-7","title":"Post 2","author":"Generał X","src":"post_01.jpg","date":"2014-19-11","cat":"walka"},
     {"id":"7","slug":"post-8","title":"Post 3","author":"Generał X","src":"post_01.jpg","date":"2014-21-10","cat":"walka"},
     {"id":"8","slug":"post-9","title":"Post 4","author":"Generał X","src":"post_01.jpg","date":"2014-09-09","cat":"walka"},
@@ -15,9 +15,9 @@
     {"id":"11","slug":"post-12","title":"Post 7","author":"Generał X","src":"post_01.jpg","date":"2013-09-11","cat":"walka"},
     {"id":"12","slug":"post-6","title":"Post 1","author":"Generał X","src":"post_01.jpg","date":"2014-12-12","cat":"walka"},
     {"id":"13","slug":"post-7","title":"Post 2","author":"Generał X","src":"post_01.jpg","date":"2014-19-11","cat":"walka"},
-    {"id":"14","slug":"post-8","title":"Post 3","author":"Generał X","src":"post_01.jpg","date":"2014-21-10","cat":"walka"},
-    {"id":"15","slug":"post-9","title":"Post 4","author":"Generał X","src":"post_01.jpg","date":"2014-09-09","cat":"walka"},
+    {"id":"14","slug":"post-8","title":"Post 3","author":"Generał X","src":"post_01.jpg","date":"2014-21-10","cat":"media"},
+    {"id":"15","slug":"post-9","title":"Post X","author":"Generał X","src":"post_01.jpg","date":"2016-09-09","cat":"walka"},
     {"id":"16","slug":"post-10","title":"Post 5","author":"Generał X","src":"post_01.jpg","date":"2014-01-07","cat":"walka"},
     {"id":"17","slug":"post-11","title":"Post 6","author":"Generał X","src":"post_01.jpg","date":"2014-02-04","cat":"walka"},
-    {"id":"18","slug":"post-12","title":"Post 7","author":"Generał X","src":"post_01.jpg","date":"2013-09-11","cat":"walka"}
+    {"id":"18","slug":"post-12","title":"AAAA","author":"Generał X","src":"post_01.jpg","date":"2015-09-11","cat":"walka"}
 ]}

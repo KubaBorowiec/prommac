@@ -7,24 +7,10 @@ html(lang='pl')
 		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
 		link(href='css/style.css', type='text/css', rel='stylesheet')
 	body(data-ng-app="PrommacApp")
-		main
-			header
-				div#logo
-					a(href="#" alt="logo")
-						img(src="app/images/logo.png") 
-				nav
-					ul(ng-controller="headerController")
-						li
-							a(ng-class="{ active: isActive('/about')}" href="#/about") Kim jesteśmy
-						li 
-							a(ng-class="{ active: isActive('/news')}" href="#/news") Aktualnosci
-						li 
-							a(ng-class="{ active: isActive('/players')}" href="#/players") Zawodnicy
-						li 
-							a(ng-class="{ active: isActive('/media')}" href="#/media") Media o nas
-						li
-							a(ng-class="{ active: isActive('/contact')}" href="#/contact") Kontakt
-			section(ng-view)
+			include header.jade
+			main
+				section(ng-view)
+			include footer.jade
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js")
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js")

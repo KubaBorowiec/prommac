@@ -1,11 +1,11 @@
 // SETTINGS
-
+@import 'compass';
 @import 'normalizer';
 @import 'fonts';
 @import 'variables';
 
 // Lay out 
-
+@import 'partials/header';
 @import 'partials/layout';
 @import 'partials/posts';
 

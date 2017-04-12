@@ -1,0 +1,18 @@
+   *{
+   	 box-sizing: border-box;
+   }
+   ul,li{
+   			margin:0;
+   			padding:0;
+   			list-style-type: none;
+   }
+   html{
+   	font-size:18px;
+   }
+   body{
+   	 background-image:url('../images/bg.jpg');
+   	 background-position: center top;
+     /*
+     @include filter-gradient(#030105, #16060b, vertical); // IE6-9
+     @include background-image(linear-gradient(top, #030105 0%,#1a2660 29%,#1a2660 77%,#16060b 100%));*/
+   }

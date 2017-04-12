@@ -25,6 +25,7 @@ html {
  */
 body {
   margin: 0;
+  padding: 0;
 }
 
 /**
@@ -444,6 +445,144 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  width: 46px;
+  height: 46px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.c-hamburger:focus {
+  outline: none;
+}
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 21.5px;
+  left: 6.9px;
+  right: 6.9px;
+  height: 3px;
+  background: #cb1b30;
+  transition: background 0s 0.1s;
+}
+.c-hamburger span::before, .c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #cb1b30;
+  content: "";
+  transition: background 0s 0.1s;
+  transition-property: top, transform;
+}
+.c-hamburger span::before {
+  top: -9.2px;
+  transition-property: top, transform;
+}
+.c-hamburger span::after {
+  bottom: -9.66px;
+  transition-property: bottom, transform;
+}
+.c-hamburger span::before, .c-hamburger span:after {
+  transition-duration: 0.1s, 0.1s;
+  transition-delay: 0.1s, 0s;
+}
+
+.c-hamburger--htx.is-active {
+  background-color: transparent;
+}
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+.c-hamburger--htx.is-active span::before, .c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.1s;
+}
+
+header .logo {
+  z-index: 3;
+  float: left;
+  position: relative;
+}
+header .logo img {
+  max-width: 100%;
+}
+header .button-mobile {
+  margin-top: 10px;
+  z-index: 3;
+  float: right;
+}
+header .header-wrapper {
+  padding: 5px;
+  overflow: auto;
+}
+header .main-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0s linear .2s,opacity .2s ease 0s;
+  background: #000;
+}
+header .main-menu ul {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  transition: none;
+}
+header .is-active + nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-image: url("../images/bg.jpg");
+  background-position: center top;
+  /*
+  @include filter-gradient(#030105, #16060b, vertical); // IE6-9
+  @include background-image(linear-gradient(top, #030105 0%,#1a2660 29%,#1a2660 77%,#16060b 100%));*/
 }
 
 .posts {

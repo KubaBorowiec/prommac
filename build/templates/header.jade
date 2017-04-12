@@ -1,0 +1,18 @@
+header.main-header
+				div.header-wrapper
+					a(class="logo" href="#" alt="logo")
+							img(src="images/logo.png") 
+					button(class="c-hamburger c-hamburger--htx button-mobile" toggle-class="is-active")
+							span toggle menu
+					nav.main-menu
+						ul(ng-controller="headerController")
+							li
+								a(ng-class="{ active: isActive('/about')}" href="#/about") Kim jesteśmy
+							li 
+								a(ng-class="{ active: isActive('/news')}" href="#/news") Aktualnosci
+							li 
+								a(ng-class="{ active: isActive('/players')}" href="#/players") Zawodnicy
+							li 
+								a(ng-class="{ active: isActive('/media')}" href="#/media") Media o nas
+							li
+								a(ng-class="{ active: isActive('/contact')}" href="#/contact") Kontakt

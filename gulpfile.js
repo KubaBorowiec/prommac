@@ -92,7 +92,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task ('watch', function(){ 
   gulp.watch('build/sass/**/*.scss', ['compass']);
-  gulp.watch('build/templates/index.jade', ['jade']);
+  gulp.watch('build/templates/*.jade', ['jade']);
   gulp.watch('build/templates/view/*.jade', ['jade-templates']);
   gulp.watch('build/js/**/*.js', ['scripts']); 
   gulp.watch('index.html', ['html']);

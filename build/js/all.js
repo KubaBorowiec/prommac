@@ -59,3 +59,13 @@ app.controller("startController",["$scope",function(e)
 	e.myInterval=1e3}]);
 app.directive("slider",["$timeout",function(e)
 	{return{restrict:"AE",replace:!0,templateUrl:"templates/slider.html"}}]);
+app.directive('toggleClass', function() {
+  return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+          element.parent().bind('click', function() {
+              element.toggleClass(attrs.toggleClass);
+          });
+      }
+  };
+});

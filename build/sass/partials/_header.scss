@@ -1,7 +1,7 @@
 $color-toggle:transparent;
 $color-toggle-acitve:transparent;
-$size:46px;
-$htOfLine:3px;
+$size:40px;
+$htOfLine:2px;
 $colorLine:$main-color;
 
 .c-hamburger {
@@ -58,7 +58,7 @@ $colorLine:$main-color;
     }
 }
 
-.c-hamburger--htx.is-active {
+.active .c-hamburger--htx {
   background-color:$color-toggle-acitve;
   span{
         background: none;
@@ -78,24 +78,28 @@ $colorLine:$main-color;
 
 header{
       .logo{
-          z-index:3;
-          float:left;
           position:relative;
+          z-index:4;
+          width:100%;
+          display:block;
+          text-align:center;
           img{
             max-width:100%;
+            margin-right:-23px;
           }
       }
       .button-mobile{
-          margin-top:10px;
-          z-index:3;
-          float:right;
+          margin-top:7px;
+          z-index:4;
       }
       .header-wrapper{
-        padding:5px;
+        margin:5px 0;
+        padding:0 7px;
         overflow:auto;
       }
       .main-menu{
           position: fixed;
+          z-index:2;
           top: 0;
           right: 0;
           bottom: 0;
@@ -113,12 +117,20 @@ header{
               -moz-transform: translate(-50%,-50%);
               transform: translate(-50%,-50%);
               display: block;
+              text-align:center;
               transition: none;
+          }
+          a{
+            display:block;
+            color:#fff;
+            font-size:1.0rem;
+            text-transform: uppercase;
+            padding:5px 0;
           }
 
       }
-      .is-active + nav {
-           visibility: visible;
+      .active nav {
+          visibility: visible;
           opacity:1;
       }
 }

@@ -1,8 +1,8 @@
-header.main-header
-				div.header-wrapper
+header.main-header(ng-controller="headerController")
+				div.header-wrapper#main-menu(ng-class="{'active' : toggle}")
 					a(class="logo" href="#" alt="logo")
 							img(src="images/logo.png") 
-					button(class="c-hamburger c-hamburger--htx button-mobile" toggle-class="is-active")
+					button(class="c-hamburger c-hamburger--htx button-mobile" ng-click="toggle=!toggle")
 							span toggle menu
 					nav.main-menu
 						ul(ng-controller="headerController")

@@ -8,11 +8,18 @@ app.config(["$routeProvider",function($routeProvider){
 	$routeProvider.when("/players",{controller:"playersController",templateUrl:"templates/players.html"}),
 	$routeProvider.otherwise({redirectTo:"/"})}]);
 app.controller("aboutController",["$scope",function($scope){}]);
-app.controller("headerController",["$scope","$location",function(o,n)
-	{o.isActive=function(o){return o===n.path()}}]);
+
+app.controller("headerController",["$scope",function($scope){
+      $scope.mobileToggle=function(){
+        var el = document.getElementById('main-menu');
+        console.log(el);
+        el.toggleClass('active');
+    }
+
+}]);
 
 app.controller("mediaController",["$scope",function(o){
-
+   
 }]);
 
 app.controller("newsController",["$scope","$http","$log",function($scope,$http,$log)
@@ -24,17 +31,15 @@ app.controller("newsController",["$scope","$http","$log",function($scope,$http,$
 	$scope.myFilter='',
 	$scope.sortBy = function(sorting) {
      $scope.sorting = sorting;
+     console.log('test');
     };
     $scope.setBegin = function(last) {
      	$scope.begin = (last * $scope.itemsPerPage);
     };
-    $scope.getNumber = function(num) {
-    	console.log(Array(num));
-    	return new Array(num);   
-	}
     $scope.begin = 0;
 	$scope.itemsPerPage = 4
 }]);
+
 app.controller("playersController",["$scope",function($log){
 
 }]);
@@ -63,7 +68,7 @@ app.directive('toggleClass', function() {
   return {
       restrict: 'A',
       link: function(scope, element, attrs) {
-          element.parent().bind('click', function() {
+          element.bind('click', function() {
               element.toggleClass(attrs.toggleClass);
           });
       }

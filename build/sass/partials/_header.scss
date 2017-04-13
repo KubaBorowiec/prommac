@@ -126,6 +126,10 @@ header{
             font-size:1.0rem;
             text-transform: uppercase;
             padding:5px 0;
+            text-decoration: none;
+          }
+          .active{
+            color:$main-color;
           }
 
       }

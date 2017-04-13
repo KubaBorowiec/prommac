@@ -27,9 +27,9 @@ function errorlog(err){
 // ///////////////////////////////////////////////
 
 gulp.task('scripts', function() {
-  return gulp.src('./build/js/*.js')
+  return gulp.src('./build/js/**/*.js')
     .pipe(plumber())
-   /* .pipe(concat('all.js'))*/
+    .pipe(concat('all.js'))
    /* .pipe(uglify())*/
     .pipe(rename('app.min.js'))   
     .pipe(gulp.dest('./app/js/'))
@@ -69,7 +69,7 @@ gulp.task('css', function(){
     .pipe(reload({stream:true}));
 });
 gulp.task('js', function(){
-    gulp.src('build/js/*.js')
+    gulp.src('app/js/*.js')
     .pipe(reload({stream:true}));
 });
 
@@ -98,7 +98,6 @@ gulp.task ('watch', function(){
   gulp.watch('index.html', ['html']);
   gulp.watch('app/css/*.css', ['css']);
   gulp.watch('app/js/*.js', ['js']);
-  gulp.watch('build/js/*.js', ['js']);
 });
 //////////////////////////////////////////////////
 // JADE

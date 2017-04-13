@@ -1,21 +1,24 @@
 article(class="post post-{{post.id}}")
 		header
-				div(class="clearfix")
-					div(class="pull-left")
-						| Data:
-						span {{post.date}}
 				h2 {{ post.title}}
+				div.details.container
+					div.pull-left.col-xs-6.text-center
+						svg-clock
+						span.text-clock {{post.date}}
+					div.pull-right.col-xs-6.text-center
+						svg-person
+						span.text-author {{post.author}}
 		div(class="image-post")
-			img(ng-src="img/posts/{{post.src}}" alt="{{post.slug}}")
-		div(ng-bind-html="content" class="content margin-top-20")
+			img(ng-src="images/posts/{{post.src}}" alt="{{post.slug}}")
+		div.text-justify(ng-bind-html="content" class="content margin-top-20")
 		footer
-			div(class="row")
-				div(class="col-sm-4")
+			div.container
+				div.col-xs-3.text-left
 					a(ng-show="vsBefore" ng-href="#/news/{{before}}")
 						|	{{ before }}
-				div(class="col-sm-4 text-center")
+				div.col-xs-6.text-center
 					a(class="up" href="#/news") Powrót do aktualności
-				div(class="col-sm-4 text-right")
+				div.col-xs-3.text-right
 					a(ng-show="vsAfter" ng-href="#/news/{{after}}")
 						|	{{ after }}
 

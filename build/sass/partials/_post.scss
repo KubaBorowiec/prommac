@@ -1,0 +1,25 @@
+.post{
+	background-color:#fff;
+	header{
+		border-top:5px solid $main-color;
+	}
+	.details{
+		padding:15px;
+		.svg-icon{
+			margin:0;
+		}
+	}
+	h2{
+		font-size:1.3rem;
+		padding:15px;
+	}
+	.content{
+		padding:15px;
+	}
+	img{
+		width:100%;
+	}
+	.text-author, .text-clock{
+		display:block;
+	}
+}

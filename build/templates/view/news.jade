@@ -1,36 +1,41 @@
 h2
 	| Aktualności
-div(class="row")
+div
 	div(class="sort")
-					button(ng-click="sortBy('date')")
+					button.date(ng-click="sortBy('date')" toggle-class="activeButton") 
+						svg-clock
 						| Data
-					button(ng-click="sortBy('title')")
+					//-button(ng-click="sortBy('title')")
 						| Tytuł
-					button(ng-click="myFilter = {cat:'walka'}")
+					button.figth(ng-click="myFilter = {cat:'walka'}" toggle-class="activeButton")
+						svg-fist
 						| Walka
-					button(ng-click="myFilter = {cat:'media'}")
+					button(ng-click="myFilter = {cat:'media'}" toggle-class="activeButton")
+						svg-mircophone
 						| Media
-					button(ng-click="myFilter = {cat:'zawodnicy'}")
+					button(ng-click="myFilter = {cat:'zawodnicy'}" toggle-class="activeButton")
+						svg-boxer
 						| Zawodnicy
-					button(ng-click="myFilter ='' ")
+					button(ng-click="myFilter ='' " toggle-class="activeButton")
+						svg-tick
 						| Wszystkie
-		div(class="id-{{post.id}} posts col-xs-6" ng-repeat="post in posts | orderBy:sorting | filter:myFilter | limitTo:itemsPerPage:begin")
-			header
-				div(class="clearfix")
-				div(class="pull-left")
-					| Data: 
-				span 
-					| {{post.date | date:"MM/dd/yyyy" }}
-				h3 {{post.title}}		        
-				div(class="cat cat-{{post.cat}}") 
-					| Kategoria: 
-					span 
-					| {{post.cat}}
-			article
-				img(ng-src="zimages/posts/{{post.src}}")
-			footer(class="grey clearfix")
-				div(class="pull-left")
-					| Autor: 
-					span {{post.author}}
-					a(class="pull-right" ng-href="#news/{{post.slug}}")
-						span(class="readmore") Czytaj więcej
+	div.container
+		div.row
+			div(class="id-{{post.id}} posts col-xs-12 col-md-6" ng-repeat="post in posts | orderBy:sorting | filter:myFilter | limitTo:itemsPerPage:begin")
+					header
+						h3 {{post.title}}		        
+					article
+								img(ng-src="images/posts/{{post.src}}")
+					footer(class="grey clearfix")
+								div(class="pull-left")
+									span 
+											| {{post.date | date:"MM/dd/yyyy" }}
+								div(class="pull-right cat cat-{{post.cat}}") 
+										| Kategoria: 
+										span 
+											| {{post.cat}}
+								div(class="pull-left")
+									| Autor: 
+									span {{post.author}}
+								a(class="pull-right" ng-href="#news/{{post.slug}}")
+										span(class="readmore") Czytaj więcej

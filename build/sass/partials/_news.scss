@@ -1,0 +1,44 @@
+.news{
+		.sort{
+			margin:0px 0 7px 0;
+	        text-align:center;
+	        background-color: #fff;
+		}
+		button{
+			background:transparent;
+			padding:8px;
+			font-size: 0.7rem;
+			color:#000;
+			margin:4px;
+			border:none;
+			font-weight:bold;
+			-webkit-appearance:none;
+   			-moz-appearance:none;
+   			appearance:none;
+   			outline: 0;
+   		}
+   		.activeButton{
+   			color:$main-color;
+   			svg{
+   			fill:$main-color;}
+   		}
+   		.posts{
+   			margin:7px 0;
+   			h3{
+   				margin:0px;
+   				padding:0px 10px;
+   			}
+	   		article,footer,header{
+	   			background-color: #fff;
+	   			padding:0px 10px;
+	   		}
+	   		article{
+				img{
+					max-width:100%;
+				}
+	   		}
+	   		footer{
+	   			color:#333;
+	   		}
+   		}
+   }

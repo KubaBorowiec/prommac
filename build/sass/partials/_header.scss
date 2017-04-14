@@ -58,7 +58,7 @@ $colorLine:$main-color;
     }
 }
 
-.active .c-hamburger--htx {
+.activeMobile .c-hamburger--htx {
   background-color:$color-toggle-acitve;
   span{
         background: none;
@@ -106,19 +106,15 @@ header{
           left: 0;
           overflow: hidden;
           visibility: hidden;
-          transition: visibility 0s linear .2s,opacity .2s ease 0s;
           background: #000;
+          transition: visibility 0s linear .2s,opacity .2s ease 0s;
           ul{
-              z-index:3;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              -webkit-transform: translate(-50%,-50%);
-              -moz-transform: translate(-50%,-50%);
-              transform: translate(-50%,-50%);
+              position: relative;
               display: block;
               text-align:center;
               transition: none;
+              z-index:3;
+              top:150px;
           }
           a{
             display:block;
@@ -133,7 +129,7 @@ header{
           }
 
       }
-      .active nav {
+      .activeMobile nav {
           visibility: visible;
           opacity:1;
       }

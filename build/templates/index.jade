@@ -1,15 +1,15 @@
 doctype html
-html(lang='pl')
+html(lang='pl' data-ng-app="PrommacApp")
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		script( src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous")
 		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
 		link(href='css/style.css', type='text/css', rel='stylesheet')
-	body(data-ng-app="PrommacApp")
+	body(ng-class="{'activeMobile': isActiveMobile}" ng-controller="mainController")
 			include header.jade
-			main
-				section(ng-view)
+			main#top
+				section(ng-view class="{{pageClass}}")
 			include footer.jade
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js")

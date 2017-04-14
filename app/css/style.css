@@ -523,21 +523,21 @@ template {
   transition-delay: 0.1s, 0s;
 }
 
-.active .c-hamburger--htx {
+.activeMobile .c-hamburger--htx {
   background-color: transparent;
 }
-.active .c-hamburger--htx span {
+.activeMobile .c-hamburger--htx span {
   background: none;
 }
-.active .c-hamburger--htx span::before {
+.activeMobile .c-hamburger--htx span::before {
   top: 0;
   transform: rotate(45deg);
 }
-.active .c-hamburger--htx span::after {
+.activeMobile .c-hamburger--htx span::after {
   bottom: 0;
   transform: rotate(-45deg);
 }
-.active .c-hamburger--htx span::before, .active .c-hamburger--htx span::after {
+.activeMobile .c-hamburger--htx span::before, .activeMobile .c-hamburger--htx span::after {
   transition-delay: 0s, 0.1s;
 }
 
@@ -570,20 +570,16 @@ header .main-menu {
   left: 0;
   overflow: hidden;
   visibility: hidden;
-  transition: visibility 0s linear .2s,opacity .2s ease 0s;
   background: #000;
+  transition: visibility 0s linear .2s,opacity .2s ease 0s;
 }
 header .main-menu ul {
-  z-index: 3;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: relative;
   display: block;
   text-align: center;
   transition: none;
+  z-index: 3;
+  top: 150px;
 }
 header .main-menu a {
   display: block;
@@ -596,7 +592,7 @@ header .main-menu a {
 header .main-menu .active {
   color: #cb1b30;
 }
-header .active nav {
+header .activeMobile nav {
   visibility: visible;
   opacity: 1;
 }
@@ -624,13 +620,23 @@ body {
   @include background-image(linear-gradient(top, #030105 0%,#1a2660 29%,#1a2660 77%,#16060b 100%));*/
 }
 
+body.activeMobile {
+  overflow-y: hidden;
+}
+
 h2 {
-  font-size: 2rem;
+  border-top: 5px solid #cb1b30;
+  font-size: 1.5rem;
   margin: 0;
   padding: 10px 0;
   color: #fff;
   text-align: center;
   background-color: #505050;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*icon*/
@@ -640,15 +646,54 @@ h2 {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 6px;
   fill: #333;
+}
+
+.news .sort {
+  margin: 0px 0 7px 0;
+  text-align: center;
+  background-color: #fff;
+}
+.news button {
+  background: transparent;
+  padding: 8px;
+  font-size: 0.7rem;
+  color: #000;
+  margin: 4px;
+  border: none;
+  font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+.news .activeButton {
+  color: #cb1b30;
+}
+.news .activeButton svg {
+  fill: #cb1b30;
+}
+.news .posts {
+  margin: 7px 0;
+}
+.news .posts h3 {
+  margin: 0px;
+  padding: 0px 10px;
+}
+.news .posts article, .news .posts footer, .news .posts header {
+  background-color: #fff;
+  padding: 0px 10px;
+}
+.news .posts article img {
+  max-width: 100%;
+}
+.news .posts footer {
+  color: #333;
 }
 
 .post {
   background-color: #fff;
-}
-.post header {
-  border-top: 5px solid #cb1b30;
 }
 .post .details {
   padding: 15px;
@@ -668,4 +713,9 @@ h2 {
 }
 .post .text-author, .post .text-clock {
   display: block;
+}
+
+footer {
+  background: #333;
+  color: #fff;
 }

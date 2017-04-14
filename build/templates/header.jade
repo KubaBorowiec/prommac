@@ -1,18 +1,18 @@
 header.main-header(ng-controller="headerController")
-				div.header-wrapper#main-menu(ng-class="{'active' : toggle}")
+				div.header-wrapper#main-menu(ng-class="{'activeMobile': isActiveMobile}")
 					a(class="logo" href="#" alt="logo")
 							img(src="images/logo.png") 
-					button(class="c-hamburger c-hamburger--htx button-mobile" ng-click="toggle=!toggle")
+					button(class="c-hamburger c-hamburger--htx button-mobile" ng-click="mobileToggle()")
 							span toggle menu
 					nav.main-menu
 						ul(ng-controller="headerController")
 							li
-								a(ng-class="{ active: isActive('/about')}" href="#/about") Kim jesteśmy
+								a(ng-class="{ active: isActive('/about')}" href="#/about" ng-click="mobileToggle()") Kim jesteśmy
 							li 
-								a(ng-class="{ active: isActive('/news')}" href="#/news") Aktualnosci
+								a(ng-class="{ active: isActive('/news')}" href="#/news" ng-click="mobileToggle()") Aktualnosci
 							li 
-								a(ng-class="{ active: isActive('/players')}" href="#/players") Zawodnicy
+								a(ng-class="{ active: isActive('/players')}" href="#/players" ng-click="mobileToggle()") Zawodnicy
 							li 
-								a(ng-class="{ active: isActive('/media')}" href="#/media") Media o nas
+								a(ng-class="{ active: isActive('/media')}" href="#/media" ng-click="mobileToggle()") Media o nas
 							li
-								a(ng-class="{ active: isActive('/contact')}" href="#/contact") Kontakt
+								a(ng-class="{ active: isActive('/contact')}" href="#/contact" ng-click="mobileToggle()") Kontakt

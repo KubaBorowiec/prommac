@@ -17,13 +17,21 @@
      @include filter-gradient(#030105, #16060b, vertical); // IE6-9
      @include background-image(linear-gradient(top, #030105 0%,#1a2660 29%,#1a2660 77%,#16060b 100%));*/
    }
+   body.activeMobile{
+      overflow-y: hidden;
+   }
    h2{
-     font-size:2rem;
+        border-top:5px solid $main-color;
+     font-size:1.5rem;
      margin:0;
      padding:10px 0;
      color:#fff;
      text-align:center;
      background-color:#505050;
+   }
+   section{
+     max-width:$widh-main-container;
+     margin:0 auto;
    }
    /*icon*/
    .svg-icon{
@@ -32,7 +40,7 @@
       display:inline-block;
       vertical-align: middle;
       text-align: center;
-      margin-right:10px;
+      margin-right:6px;
       fill:#333; 
    }
    .svg-icon-clock{

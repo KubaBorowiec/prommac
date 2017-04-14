@@ -1,3 +1,3 @@
-app.controller("playersController",["$scope",function($log){
-
+app.controller("playersController",["$scope",function($scope,$log){
+   $scope.pageClass = 'players'
 }]);

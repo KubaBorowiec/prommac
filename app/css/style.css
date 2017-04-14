@@ -635,7 +635,7 @@ h2 {
 }
 
 section {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -679,16 +679,19 @@ section {
 }
 .news .posts h3 {
   margin: 0px;
-  padding: 0px 10px;
+  padding: 10px 5px 5px 5px;
 }
 .news .posts article, .news .posts footer, .news .posts header {
   background-color: #fff;
-  padding: 0px 10px;
+}
+.news .posts article {
+  padding: 5px 0px;
 }
 .news .posts article img {
   max-width: 100%;
 }
 .news .posts footer {
+  padding: 10px;
   color: #333;
 }
 
@@ -713,6 +716,10 @@ section {
 }
 .post .text-author, .post .text-clock {
   display: block;
+}
+
+.player img {
+  max-width: 100%;
 }
 
 footer {

@@ -43,6 +43,12 @@
       margin-right:6px;
       fill:#333; 
    }
-   .svg-icon-clock{
+.posts.ng-leave {
+  animation-name: examples;
+  animation-duration: 4s;
+}
 
-   }
+@keyframes examples {
+    from {margin-top:0;margin-bottom:0;height:200px;}
+    to {height: 0px;}
+}

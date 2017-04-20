@@ -11,6 +11,17 @@ app.directive('toggleClass', function() {
       }
   };
 });
+app.directive('addClass', function() {
+  return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+          element.on('click', function() {
+              element.siblings().removeClass(attrs.addClass);
+              element.addClass(attrs.addClass);
+          });
+      }
+  };
+});
 app.directive('upTop', function() {
   return {
       restrict: 'AE',

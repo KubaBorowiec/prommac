@@ -1,11 +1,10 @@
-app.controller("newsController",["$scope","$http","$log",function($scope,$http,$log)
+app.controller("newsController",["$scope","$http","$log", function($scope,$http,$log)
 	{$http({method:"GET",url:"data/posts.json"}).then(function($http)
 	{$scope.posts=$http.data.posts,$scope.totalItems=$scope.posts.length},function($scope){}),
 	$scope.pageClass = 'news',
 	$scope.maxSize=10,
 	$scope.sorting='title',
 	$scope.reverse=true,
-	$scope.myFilter='',
 	$scope.sortBy = function(sorting) {
      	$scope.sorting = sorting;
      console.log('test');
@@ -14,5 +13,5 @@ app.controller("newsController",["$scope","$http","$log",function($scope,$http,$
      	$scope.begin = (last * $scope.itemsPerPage);
     };
     $scope.begin = 0;
-	$scope.itemsPerPage = 10
+	$scope.itemsPerPage = 20;
 }]);

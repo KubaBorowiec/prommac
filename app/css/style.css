@@ -650,29 +650,55 @@ section {
   fill: #333;
 }
 
+.posts.ng-leave {
+  animation-name: examples;
+  animation-duration: 4s;
+}
+
+@keyframes examples {
+  from {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 200px;
+  }
+  to {
+    height: 0px;
+  }
+}
 .news .sort {
   margin: 0px 0 7px 0;
   text-align: center;
   background-color: #fff;
 }
 .news button {
-  background: transparent;
+  margin: 4px;
   padding: 8px;
   font-size: 0.7rem;
-  color: #000;
-  margin: 4px;
-  border: none;
-  font-weight: bold;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 2px;
+  background-color: #f0f8ff;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: 0;
 }
 .news .activeButton {
-  color: #cb1b30;
+  color: #fff;
+  animation-name: example;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
 .news .activeButton svg {
-  fill: #cb1b30;
+  fill: #fff;
+}
+@-webkit-keyframes example {
+  from {
+    background-color: #f0f8ff;
+  }
+  to {
+    background-color: #cb1b30;
+  }
 }
 .news .posts {
   margin: 7px 0;

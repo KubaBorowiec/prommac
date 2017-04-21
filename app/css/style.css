@@ -650,21 +650,6 @@ section {
   fill: #333;
 }
 
-.posts.ng-leave {
-  animation-name: examples;
-  animation-duration: 4s;
-}
-
-@keyframes examples {
-  from {
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 200px;
-  }
-  to {
-    height: 0px;
-  }
-}
 .news .sort {
   margin: 0px 0 7px 0;
   text-align: center;
@@ -702,6 +687,16 @@ section {
 }
 .news .posts {
   margin: 7px 0;
+  	   	/*	&.ng-leave, &.ng-enter, &.ng-move{
+  	   			transition:all 0.5s ease-in;
+  	   		}
+  	   		&.ng-leave.ng-leave-active, &.ng-move, &.ng-enter {
+    				opacity:0;
+  	   		}
+  	   		&.ng-leave, &.ng-move.ng-move-active, &.ng-enter.ng-enter-active{
+    				opacity:1;
+  	   		}
+          */
 }
 .news .posts h3 {
   margin: 0px;
@@ -744,8 +739,18 @@ section {
   display: block;
 }
 
+.players {
+  text-align: center;
+}
+
+.player {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px;
+}
 .player img {
   max-width: 100%;
+  max-width: 320px;
 }
 
 footer {

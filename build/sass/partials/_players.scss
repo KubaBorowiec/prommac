@@ -1,5 +1,12 @@
+.players{
+	text-align: center;
+}
 .player{
+	display:inline-block;
+	margin:10px auto;
+	padding:10px;
 	img{
 		max-width:100%;
+		max-width:320px;
 	}
 }

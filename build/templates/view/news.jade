@@ -3,21 +3,21 @@ h2
 div
 	div(class="sort")
 					button.date(ng-click="sortBy('date')" add-class="activeButton") 
-						svg-clock
+						svg-icon(type="clock" class="svg-icon svg-icon-clock")
 						| Data
 					//-button(ng-click="sortBy('title')")
 						| Tytuł
 					button.figth(ng-click="myFilter = {cat:'walka'}" add-class="activeButton")
-						svg-fist
+						svg-icon(type="fist" class="svg-icon svg-icon-fist" )
 						| Walka
 					button(ng-click="myFilter = {cat:'media'}" add-class="activeButton")
-						svg-mircophone
+						svg-icon(type="microphone" class="svg-icon svg-icon-microphone")
 						| Media
 					button(ng-click="myFilter = {cat:'zawodnicy'}" add-class="activeButton")
-						svg-boxer
+						svg-icon(type="boxer" class="svg-icon svg-icon-boxer")
 						| Zawodnicy
-					button(ng-click="myFilter ='' " add-class="activeButton")
-						svg-tick
+					button(ng-click="myFilter ='' " class="activeButton" add-class="activeButton")
+						svg-icon(type="tick" class="svg-icon svg-icon-tick")
 						| Wszystkie
 	div.container
 		div.row

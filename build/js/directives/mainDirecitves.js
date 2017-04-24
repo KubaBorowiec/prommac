@@ -33,45 +33,20 @@ app.directive('upTop', function() {
       }
   };
 });
-app.directive('svgClock', function() {
+app.directive('svgIcon', function() {
   return {
     restrict: 'AE',
-    replace: true,
-    templateUrl: 'svg/icon-clock.html'
+    templateUrl: function(elem, attr) {
+      return 'svg/icon-' + attr.type + '.html';
+    }
   };
 });
-app.directive('svgPerson', function() {
+app.directive('ratingIcons', function() {
   return {
     restrict: 'AE',
-    replace: true,
-    templateUrl: 'svg/icon-person.html'
+    templateUrl: function(elem, attr) {
+      return 'svg/rating.html';
+    }
   };
 });
-app.directive('svgFist', function() {
-  return {
-    restrict: 'AE',
-    replace: true,
-    templateUrl: 'svg/icon-fist.html'
-  };
-});
-app.directive('svgBoxer', function() {
-  return {
-    restrict: 'AE',
-    replace: true,
-    templateUrl: 'svg/icon-boxer.html'
-  };
-});
-app.directive('svgMircophone', function() {
-  return {
-    restrict: 'AE',
-    replace: true,
-    templateUrl: 'svg/icon-microphone.html'
-  };
-});
-app.directive('svgTick', function() {
-  return {
-    restrict: 'AE',
-    replace: true,
-    templateUrl: 'svg/icon-tick.html'
-  };
-});
+

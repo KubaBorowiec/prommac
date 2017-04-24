@@ -5,16 +5,19 @@
 	        background-color: #fff;
 		}
 		button{
-			margin:4px;
-			padding:6px;
-			font-size: 0.7rem;
-			color:#000;
-			border:1px solid #000;
-			border-radius:10px;
-			background-color:#C0C0C0;
+			    margin: 4px;
+    padding: 7px;
+    font-size: 0.7rem;
+    color: #000;
+    border: none;
+    border-radius: 11px;
+    background-color: #C0C0C0;
 			-webkit-appearance:none;
    			-moz-appearance:none;
    			appearance:none;
+-webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+-moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
    			outline: 0;
    			svg{
    				fill:#000;

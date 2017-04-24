@@ -650,6 +650,58 @@ section {
   fill: #333;
 }
 
+.svg-icon-small {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 6px;
+  fill: #333;
+}
+
+.svg-icon-star {
+  fill: #fff;
+  stroke: #cb1b30;
+  stroke-width: 50px;
+}
+
+.rating-icons {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+.rating-icons svg {
+  width: 25px;
+  height: 25px;
+  float: left;
+  padding-right: 5px;
+  fill: #cb1b30;
+  stroke: #cb1b30;
+  stroke-width: 50px;
+}
+.rating-icons:hover .star {
+  fill: #cb1b30 !important;
+}
+.rating-icons .star:hover ~ .star {
+  fill: #C0C0C0 !important;
+}
+.rating-icons[data-stars="1"] .star:nth-child(1) ~ .star {
+  fill: #C0C0C0;
+}
+.rating-icons[data-stars="2"] .star:nth-child(2) ~ .star {
+  fill: #C0C0C0;
+}
+.rating-icons[data-stars="3"] .star:nth-child(3) ~ .star {
+  fill: #C0C0C0;
+}
+.rating-icons[data-stars="4"] .star:nth-child(4) ~ .star {
+  fill: #C0C0C0;
+}
+.rating-icons[data-stars="5"] .star:nth-child(5) ~ .star {
+  fill: #C0C0C0;
+}
+
 .news .sort {
   margin: 0px 0 7px 0;
   text-align: center;
@@ -657,15 +709,18 @@ section {
 }
 .news button {
   margin: 4px;
-  padding: 6px;
+  padding: 7px;
   font-size: 0.7rem;
   color: #000;
-  border: 1px solid #000;
-  border-radius: 10px;
+  border: none;
+  border-radius: 11px;
   background-color: #C0C0C0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
   outline: 0;
 }
 .news button svg {
@@ -746,25 +801,60 @@ section {
   text-align: center;
 }
 
+.players {
+  background-color: #fff;
+}
+
 .player {
-  display: inline-block;
-  margin: 10px auto;
   padding: 10px;
 }
+.player h2 {
+  min-height: 70px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  display: table;
+  width: 100%;
+  line-height: 22px;
+}
+.player h2 span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.player .inner {
+  background-color: #C0C0C0;
+  border: 1px solid #000;
+  padding: 10px 10px 0 10px;
+}
 .player img {
-  max-width: 100%;
+  width: 100%;
   max-width: 320px;
 }
 
 .contact {
   background-color: #fff;
 }
+.contact form {
+  padding: 15px;
+}
 .contact label {
   display: block;
+  margin: 10px 0;
 }
-.contact input[type="text"] {
+.contact input[type="text"], .contact textarea {
   width: 100%;
   padding: 5px;
+}
+.contact input[type="submit"] {
+  background-color: #cb1b30;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border: none;
+  padding: 11px;
+  color: #fff;
+  margin: 10px 0;
+  width: 50%;
 }
 
 footer {

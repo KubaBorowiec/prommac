@@ -1,12 +1,30 @@
 .players{
 	text-align: center;
 }
+.players{
+	background-color: #fff;
+}
 .player{
-	display:inline-block;
-	margin:10px auto;
 	padding:10px;
+	h2{
+		min-height: 70px;
+		font-size:1.1rem;
+        vertical-align: middle;
+        display:table;
+        width:100%;
+        line-height: 22px;
+	        span{
+	        	display: table-cell;
+	        	vertical-align: middle;
+	        }
+		}
+	.inner{
+		background-color:#C0C0C0;
+		border:1px solid #000;
+		padding:10px 10px 0 10px;
+	}
 	img{
-		max-width:100%;
+		width:100%;
 		max-width:320px;
 	}
 }

@@ -657,29 +657,32 @@ section {
 }
 .news button {
   margin: 4px;
-  padding: 8px;
+  padding: 6px;
   font-size: 0.7rem;
-  color: #333;
-  border: 1px solid #333;
-  border-radius: 2px;
-  background-color: #f0f8ff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #C0C0C0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: 0;
 }
+.news button svg {
+  fill: #000;
+}
 .news .activeButton {
   color: #fff;
   animation-name: example;
   animation-fill-mode: forwards;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 .news .activeButton svg {
   fill: #fff;
 }
 @-webkit-keyframes example {
   from {
-    background-color: #f0f8ff;
+    background-color: #C0C0C0;
   }
   to {
     background-color: #cb1b30;

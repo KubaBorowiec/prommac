@@ -753,6 +753,17 @@ section {
   max-width: 320px;
 }
 
+.contact {
+  background-color: #fff;
+}
+.contact label {
+  display: block;
+}
+.contact input[type="text"] {
+  width: 100%;
+  padding: 5px;
+}
+
 footer {
   background: #333;
   color: #fff;

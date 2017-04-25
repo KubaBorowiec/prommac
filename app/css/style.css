@@ -556,6 +556,11 @@ header .button-mobile {
   margin-top: 7px;
   z-index: 4;
 }
+@media only screen and (min-width: 768px) {
+  header .button-mobile {
+    display: none;
+  }
+}
 header .header-wrapper {
   margin: 5px 0;
   padding: 0 7px;
@@ -573,6 +578,13 @@ header .main-menu {
   background: #000;
   transition: visibility 0s linear .2s,opacity .2s ease 0s;
 }
+@media only screen and (min-width: 768px) {
+  header .main-menu {
+    position: static;
+    visibility: visible;
+    margin: 10px 0;
+  }
+}
 header .main-menu ul {
   position: relative;
   display: block;
@@ -580,6 +592,18 @@ header .main-menu ul {
   transition: none;
   z-index: 3;
   top: 150px;
+}
+@media only screen and (min-width: 768px) {
+  header .main-menu ul {
+    position: static;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header .main-menu li {
+    float: left;
+    flex-grow: 1;
+  }
 }
 header .main-menu a {
   display: block;
@@ -589,8 +613,28 @@ header .main-menu a {
   padding: 5px 0;
   text-decoration: none;
 }
+@media only screen and (min-width: 768px) {
+  header .main-menu a {
+    font-size: 1.0rem;
+    padding: 15px 0;
+    text-transform: capitalize;
+  }
+}
 header .main-menu .active {
   color: #820407;
+}
+@media only screen and (min-width: 768px) {
+  header .main-menu .active {
+    color: #fff;
+    background: #cb1b30;
+    background: -moz-linear-gradient(top, #cb1b30 0%, #950504 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cb1b30), color-stop(100%, #950504));
+    background: -webkit-linear-gradient(top, #cb1b30 0%, #950504 100%);
+    background: -o-linear-gradient(top, #cb1b30 0%, #950504 100%);
+    background: -ms-linear-gradient(top, #cb1b30 0%, #950504 100%);
+    background: linear-gradient(to bottom, #cb1b30 0%, #950504 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  }
 }
 header .activeMobile nav {
   visibility: visible;
@@ -619,6 +663,11 @@ body {
 
 body.activeMobile {
   overflow-y: hidden;
+}
+@media only screen and (min-width: 768px) {
+  body.activeMobile {
+    overflow-y: auto;
+  }
 }
 
 h2 {
@@ -815,6 +864,11 @@ section {
   text-align: center;
   background-color: #fff;
 }
+@media only screen and (min-width: 768px) {
+  .news .sort {
+    padding: 10px 0;
+  }
+}
 .news button {
   margin: 4px;
   padding: 7px;
@@ -853,16 +907,6 @@ section {
 }
 .news .posts {
   margin: 7px 0;
-  	   	/*	&.ng-leave, &.ng-enter, &.ng-move{
-  	   			transition:all 0.5s ease-in;
-  	   		}
-  	   		&.ng-leave.ng-leave-active, &.ng-move, &.ng-enter {
-    				opacity:0;
-  	   		}
-  	   		&.ng-leave, &.ng-move.ng-move-active, &.ng-enter.ng-enter-active{
-    				opacity:1;
-  	   		}
-          */
 }
 .news .posts h3 {
   margin: 0px;

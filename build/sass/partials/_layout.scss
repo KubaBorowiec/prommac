@@ -16,6 +16,9 @@
    }
    body.activeMobile{
       overflow-y: hidden;
+      @media only screen and (min-width: $br-tablet) {
+        overflow-y: auto;
+      }
    }
    h2{
     border-top:5px solid $main-color;

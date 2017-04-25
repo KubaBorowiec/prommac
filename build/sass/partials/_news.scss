@@ -1,8 +1,11 @@
 .news{
 		.sort{
-			margin:0px 0 7px 0;
-	        text-align:center;
-	        background-color: #fff;
+		margin:0px 0 7px 0;
+	   text-align:center;
+	   background-color: #fff;
+     @media only screen and (min-width: $br-tablet) {
+          padding:10px 0;
+      }
 		}
 		button{
 			    margin: 4px;
@@ -12,12 +15,12 @@
     border: none;
     border-radius: 11px;
     background-color: #C0C0C0;
-			-webkit-appearance:none;
-   			-moz-appearance:none;
-   			appearance:none;
--webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
--moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+		-webkit-appearance:none;
+   	-moz-appearance:none;
+   	appearance:none;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
    			outline: 0;
    			svg{
    				fill:#000;
@@ -55,15 +58,5 @@ box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
 	   			padding:10px;
 	   			color:#333;
 	   		}
-	   	/*	&.ng-leave, &.ng-enter, &.ng-move{
-	   			transition:all 0.5s ease-in;
-	   		}
-	   		&.ng-leave.ng-leave-active, &.ng-move, &.ng-enter {
-  				opacity:0;
-	   		}
-	   		&.ng-leave, &.ng-move.ng-move-active, &.ng-enter.ng-enter-active{
-  				opacity:1;
-	   		}
-        */
    		}
    }

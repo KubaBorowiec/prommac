@@ -91,6 +91,9 @@ header{
       .button-mobile{
           margin-top:7px;
           z-index:4;
+          @media only screen and (min-width: $br-tablet) {
+              display:none;
+          }
       }
       .header-wrapper{
         margin:5px 0;
@@ -108,6 +111,11 @@ header{
           visibility: hidden;
           background: #000;
           transition: visibility 0s linear .2s,opacity .2s ease 0s;
+           @media only screen and (min-width: $br-tablet) {
+              position:static;
+              visibility:visible;
+              margin:10px 0;
+          }
           ul{
               position: relative;
               display: block;
@@ -115,6 +123,17 @@ header{
               transition: none;
               z-index:3;
               top:150px;
+              @media only screen and (min-width: $br-tablet) {
+                  position: static;
+                  display: flex;
+
+              }
+          }
+          li{
+             @media only screen and (min-width: $br-tablet) {
+                 float:left;
+                 flex-grow: 1;
+              }
           }
           a{
             display:block;
@@ -123,9 +142,26 @@ header{
             text-transform: uppercase;
             padding:5px 0;
             text-decoration: none;
+            @media only screen and (min-width: $br-tablet) {
+                font-size:1.0rem;
+                padding: 15px 0;
+                text-transform: capitalize;
+            }
           }
           .active{
             color:$main-color;
+            @media only screen and (min-width: $br-tablet) {
+              color:#fff;
+              background: #cb1b30;
+              background: -moz-linear-gradient(top, #cb1b30 0%, #950504 100%);
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cb1b30), color-stop(100%, #950504));
+              background: -webkit-linear-gradient(top, #cb1b30 0%, #950504 100%);
+              background: -o-linear-gradient(top, #cb1b30 0%, #950504 100%);
+              background: -ms-linear-gradient(top, #cb1b30 0%, #950504 100%);
+              background: linear-gradient(to bottom, #cb1b30 0%, #950504 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+
+            }
           }
 
       }

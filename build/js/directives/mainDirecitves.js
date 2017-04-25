@@ -1,5 +1,5 @@
-app.directive("slider",["$timeout",function(e)
-	{return{restrict:"AE",replace:!0,templateUrl:"templates/slider.html"}}]);
+app.directive('slider',['$timeout',function(e)
+	{return{restrict:'AE',replace:!0,templateUrl:'templates/slider.html'}}]);
 
 app.directive('toggleClass', function() {
   return {
@@ -49,4 +49,32 @@ app.directive('ratingIcons', function() {
     }
   };
 });
+app.directive('countDown', function(){
+   return {
+    restrict: 'C',
+    link:function(scope, element, attrs){
+        var e = {},
+        date = new Date(attrs.date),
+        updateClock = function () {
+            e.seconds = (date - new Date())/1000;
+            e.timeTillEvent = {
+              daysLeft: parseInt(e.seconds/86400),
+              hoursLeft: parseInt(e.seconds%86400/3600),
+              minutesLeft: parseInt(e.seconds%86400%3600/60),
+              secondsLeft: parseInt(e.seconds%86400%3600%60)
+            }
+            element.text(e.timeTillEvent.daysLeft+' d, '+e.timeTillEvent.hoursLeft+' h, '+ e.timeTillEvent.minutesLeft + ' m, ' +
+             e.timeTillEvent.secondsLeft + ' s ')
+        };
+
+        setInterval(function () {
+           updateClock()
+        }, 1000);
+        
+        updateClock();
+    }
+  };
+});
+
+
 

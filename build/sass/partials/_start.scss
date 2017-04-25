@@ -1,0 +1,87 @@
+.start{
+	.banner{
+			width: 320px;
+			margin:15px;
+			padding-top: 10px;
+			background-color: #4c78b8; // Old browsers
+			@include filter-gradient(#4c78b8, #f0f9ff, horizontal); // IE6-9 fallback on horizontal gradient
+			@include background-image(linear-gradient(left top, #4c78b8 0%,#f0f9ff 100%));
+		.logo{
+			text-align:center;
+			padding:10px 0;
+		}
+		.ticket{
+			-webkit-transform: rotate(-8deg) skew(-8deg);
+			-moz-transform: rotate(-8deg) skew(-8deg);
+			-ms-transform: rotate(-8deg) skew(-8deg);
+			-o-transform: rotate(-8deg) skew(-8deg);
+			
+			.left{
+				display:inline-block;
+				padding:13px 21px;
+				margin-bottom:0;
+				margin-left: -2px;
+				font-weight:bold;
+				background-color:#820407;
+				.date,.place{
+					display:block;
+					color:#fdf300;
+					font-size:1.6rem;
+					line-height:1.6rem;
+				}
+				.place{
+					font-size:1.7rem;
+				}
+				.addres{
+					display:block;
+					color:#ee8b3a;
+					font-size:0.7rem;
+				}
+			}
+			.right{
+				position:relative;
+				display: inline-block;
+	    		margin-top: -13px;
+	    		right: -189px;
+	    		margin-bottom:0;
+	    		padding: 10px 12px;
+				background-color:#820407;
+				.date{
+					color:#fff;
+					font-weight: 300;
+					font-size:1.1rem;
+				}
+			}
+		}
+		.count-down{
+			margin:10px 0;
+			padding:10px 0;
+			background-color: #fff;
+			color:#820407;
+			font-size: 1.3rem;
+			font-weight:bold;
+			text-align:center;
+		}
+		.buy-ticket{
+			text-align:center;
+			padding:10px 0;
+			button{
+				margin: 4px;
+		    	padding: 7px 14px;
+		    	font-size: 1.2rem;
+		    	color: #fff;
+		    	border: none;
+		    	border-radius: 11px;
+		    	background-color: $main-color;
+		    	-webkit-appearance: none;
+		    	-moz-appearance: none;
+		    	appearance: none;
+		    	-webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+		    	-moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+		    	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+		    	outline: 0;
+		    	text-transform: uppercase;
+	    	}
+		}
+	}
+}

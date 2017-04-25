@@ -1,29 +1,27 @@
-div(class="row")
-	div(class="col-md-8")
-		slider(images="images")
-	div(class="col-md-4 text-center")
-		div(class="ticket gray")
-			img(src="images/ticket.jpg")
-			a(class="" href="#")
-			span Kup bilet
-div(class="gray margin-top-20 clearfix")
-			div(class="col-md-4")
-				h3 Partnerzy główni	
-div(class="row margin-top-20")
-			div(class="col-md-8")
-				div(class="start-box about")
-					h3 
-						a(href="#/about") Kim jesteśmy
-				div(class="start-box players")
-					h3
-						a(href="#/players") Zawodnicy
-				div(class="start-box media")
-					h3
-						a(href="#/media") Media o nas
-			div(class="col-md-4")
-				div(class="player-cart")
-					h3
-						span Karta walk
+.container
+	div.row
+		div(class="gray margin-top-20 clearfix")
+					div(class="col-md-4")
+						h3 Partnerzy główni
+	div(class="row")
+		div(class="col-sm-8")
+			slider(images="images")
+		div.col-sm-4
+			div.banner
+				div.logo
+					img(src="images/logo.png") 
+				div.ticket
+						p.left
+							sapn.date 3 marca 2018 
+							span.place Hala ORBITA 
+							span.addres
+								| WROCŁAW, ul. Wejherowska 34
+						p.right
+							sapn.date
+								| START 19:00
+				div.time(date="March 3, 2018 19:00:00" class="count-down")
+				div.buy-ticket
+					button KUP BILET
 
 
 

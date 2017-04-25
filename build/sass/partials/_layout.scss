@@ -40,4 +40,65 @@
       margin-right:6px;
       fill:#333; 
    }
-  
+  .svg-icon-small{
+    width:$icon-size-small;
+    height:$icon-size-small;
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-right:6px;
+    fill:#333; 
+  }
+  .svg-icon-star{
+    fill:#fff;
+    stroke:$main-color;
+    stroke-width:50px;
+  }
+//* Rating
+ .rating-icons{
+   display:inline-block;
+   margin:5px;
+   cursor:pointer;
+   svg{
+     width:$icon-size-small + 5px;
+     height:$icon-size-small + 5px;
+     float:left;
+     padding-right:5px;
+     fill:$main-color;
+     stroke:$main-color;
+     stroke-width:50px;
+   }
+   &:hover {
+     .star{
+       fill: $main-color !important;
+     }
+   }
+   .star:hover ~ .star {
+       fill:#C0C0C0 !important;
+   }
+   &[data-stars="1"]{
+       .star:nth-child(1) ~ .star{
+         fill:#C0C0C0;
+       }
+   }
+   &[data-stars="2"]{
+       .star:nth-child(2) ~ .star{
+         fill:#C0C0C0;
+       }
+   }
+    &[data-stars="3"]{
+       .star:nth-child(3) ~ .star{
+         fill:#C0C0C0;
+       }
+   }
+    &[data-stars="4"]{
+       .star:nth-child(4) ~ .star{
+         fill:#C0C0C0;
+       }
+   }
+   &[data-stars="5"]{
+       .star:nth-child(5) ~ .star{
+         fill:#C0C0C0;
+       }
+   }
+ }

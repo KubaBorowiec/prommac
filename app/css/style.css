@@ -615,9 +615,6 @@ body {
   font-family: 'Open Sans';
   background-image: url("../images/bg.jpg");
   background-position: center top;
-  /*
-  @include filter-gradient(#030105, #16060b, vertical); // IE6-9
-  @include background-image(linear-gradient(top, #030105 0%,#1a2660 29%,#1a2660 77%,#16060b 100%));*/
 }
 
 body.activeMobile {
@@ -650,56 +647,24 @@ section {
   fill: #333;
 }
 
-.svg-icon-small {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  margin-right: 6px;
-  fill: #333;
+.slider {
+  border-top: 5px solid #cb1b30;
 }
 
-.svg-icon-star {
-  fill: #fff;
-  stroke: #cb1b30;
-  stroke-width: 50px;
+.carousel-indicators {
+  bottom: 5px;
 }
-
-.rating-icons {
-  display: inline-block;
-  margin: 5px;
-  cursor: pointer;
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+  border: 2px solid #cb1b30;
 }
-.rating-icons svg {
-  width: 25px;
-  height: 25px;
-  float: left;
-  padding-right: 5px;
-  fill: #cb1b30;
-  stroke: #cb1b30;
-  stroke-width: 50px;
-}
-.rating-icons:hover .star {
-  fill: #cb1b30 !important;
-}
-.rating-icons .star:hover ~ .star {
-  fill: #C0C0C0 !important;
-}
-.rating-icons[data-stars="1"] .star:nth-child(1) ~ .star {
-  fill: #C0C0C0;
-}
-.rating-icons[data-stars="2"] .star:nth-child(2) ~ .star {
-  fill: #C0C0C0;
-}
-.rating-icons[data-stars="3"] .star:nth-child(3) ~ .star {
-  fill: #C0C0C0;
-}
-.rating-icons[data-stars="4"] .star:nth-child(4) ~ .star {
-  fill: #C0C0C0;
-}
-.rating-icons[data-stars="5"] .star:nth-child(5) ~ .star {
-  fill: #C0C0C0;
+.carousel-indicators .active {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+  background-color: #cb1b30;
 }
 
 .news .sort {

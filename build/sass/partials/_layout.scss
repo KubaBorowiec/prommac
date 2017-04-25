@@ -13,15 +13,12 @@
    	 font-family:'Open Sans';
    	 background-image:url('../images/bg.jpg');
    	 background-position: center top;
-     /*
-     @include filter-gradient(#030105, #16060b, vertical); // IE6-9
-     @include background-image(linear-gradient(top, #030105 0%,#1a2660 29%,#1a2660 77%,#16060b 100%));*/
    }
    body.activeMobile{
       overflow-y: hidden;
    }
    h2{
-        border-top:5px solid $main-color;
+    border-top:5px solid $main-color;
      font-size:1.5rem;
      margin:0;
      padding:10px 0;
@@ -43,66 +40,4 @@
       margin-right:6px;
       fill:#333; 
    }
-  .svg-icon-small{
-      width:$icon-size-small;
-      height:$icon-size-small;
-      display:inline-block;
-      vertical-align: middle;
-      text-align: center;
-      margin-right:6px;
-      fill:#333; 
-  }
-  .svg-icon-star{
-     fill:#fff;
-     stroke:$main-color;
-     stroke-width:50px;
-  }
-  // Rating
-  .rating-icons{
-    display:inline-block;
-    margin:5px;
-    cursor:pointer;
-    svg{
-      width:$icon-size-small + 5px;
-      height:$icon-size-small + 5px;
-      float:left;
-      padding-right:5px;
-      fill:$main-color;
-      stroke:$main-color;
-      stroke-width:50px;
-      
-    }
-    &:hover {
-      .star{
-        fill: $main-color !important;
-      }
-    }
-    .star:hover ~ .star {
-        fill:#C0C0C0 !important;
-    }
-    &[data-stars="1"]{
-        .star:nth-child(1) ~ .star{
-          fill:#C0C0C0;
-        }
-    }
-    &[data-stars="2"]{
-        .star:nth-child(2) ~ .star{
-          fill:#C0C0C0;
-        }
-    }
-     &[data-stars="3"]{
-        .star:nth-child(3) ~ .star{
-          fill:#C0C0C0;
-        }
-    }
-     &[data-stars="4"]{
-        .star:nth-child(4) ~ .star{
-          fill:#C0C0C0;
-        }
-    }
-    &[data-stars="5"]{
-        .star:nth-child(5) ~ .star{
-          fill:#C0C0C0;
-        }
-    }
-  }
+  

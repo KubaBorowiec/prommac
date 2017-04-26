@@ -1,4 +1,19 @@
-footer{
+.footer-main{
 	background: #333;
 	color:#fff;
+	border-top:5px solid #c0c0c0;
+	padding:20px 0px;
+	text-align:center;
+	.svg-icon-smartphone{
+		svg{
+			fill:#c0c0c0;}
+	}
+	.svg-icon-mail{
+		svg{
+			fill:#c0c0c0;}
+	}
+	.mail, .phone, .up-top{
+		display:inline-block;
+		margin:5px;
+	}
 }

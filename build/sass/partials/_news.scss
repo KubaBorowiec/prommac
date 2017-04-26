@@ -1,30 +1,30 @@
 .news{
 		.sort{
-		margin:0px 0 7px 0;
-	   text-align:center;
-	   background-color: #fff;
+      		margin:0px 0 7px 0;
+      	  text-align:center;
+      	  background-color: #fff;
      @media only screen and (min-width: $br-tablet) {
           padding:10px 0;
       }
 		}
-		button{
-			    margin: 4px;
-    padding: 7px;
-    font-size: 0.7rem;
-    color: #000;
-    border: none;
-    border-radius: 11px;
-    background-color: #C0C0C0;
-		-webkit-appearance:none;
-   	-moz-appearance:none;
-   	appearance:none;
-    -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
-    -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
-    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
-   			outline: 0;
-   			svg{
-   				fill:#000;
-   			}
+		.button-sort, .button-filtr{
+    		margin: 4px;
+        padding: 7px;
+        font-size: 0.7rem;
+        color: #000;
+        border: none;
+        border-radius: 11px;
+        background-color: #C0C0C0;
+    		-webkit-appearance:none;
+       	-moz-appearance:none;
+       	appearance:none;
+        -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+        -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+        box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+       	outline: 0;
+     			svg{
+            margin-right: 6px;
+     				fill:#000;}
    		}
    		.activeButton{
    			color:#fff;
@@ -32,31 +32,31 @@
    			animation-fill-mode: forwards;
    			animation-duration: 0.5s;
    			svg{
-   				fill:#fff;
-   			}
+   				fill:#fff;}
    		}
    		@-webkit-keyframes example {
          from {background-color:#C0C0C0}
          to {background-color: $main-color;}
-        }
+      }
    		.posts{
    			margin:7px 0;
    			h3{
-   				margin:0px;
-   				padding:10px 5px 5px 5px;
+     				margin:0px;
+     				padding:10px 5px 5px 5px;
    			}
 	   		article, footer,header{
-	   			background-color: #fff;
+	   			 background-color: #fff;
 	   		}
 	   		article{
-	   			padding:5px 0px;
+	   			 padding:5px 0px;
 	   			img{
-					max-width:100%;
-				}
+					 max-width:100%;}
 	   		}
 	   		footer{
 	   			padding:10px;
-	   			color:#333;
-	   		}
+	   			color:#333;}
    		}
+      .svg-icon{
+          margin-right:6px;
+      }
    }

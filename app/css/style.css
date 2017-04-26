@@ -693,17 +693,15 @@ section {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  margin-right: 6px;
   fill: #333;
 }
 
 .svg-icon-small {
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 13px;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  margin-right: 6px;
   fill: #333;
 }
 
@@ -719,8 +717,8 @@ section {
   cursor: pointer;
 }
 .rating-icons svg {
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
   float: left;
   padding-right: 5px;
   fill: #820407;
@@ -747,6 +745,46 @@ section {
 }
 .rating-icons[data-stars="5"] .star:nth-child(5) ~ .star {
   fill: #C0C0C0;
+}
+
+.up-top {
+  padding: 5px 7px;
+  color: #000;
+  vertical-align: middle;
+  border: none;
+  border-radius: 5px;
+  background-color: #C0C0C0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+  outline: 0;
+}
+.up-top svg {
+  fill: #820407;
+  width: 15px;
+  height: 15px;
+}
+
+.read-more {
+  color: #820407;
+  font-weight: bold;
+}
+.read-more .text {
+  position: relative;
+  top: 3px;
+}
+.read-more .icon {
+  display: inline-block;
+  padding: 0px 3px 5px 5px;
+  margin-left: 6px;
+  border-radius: 3px;
+  background-color: #820407;
+}
+.read-more svg {
+  fill: #fff;
 }
 
 .slider {
@@ -871,7 +909,7 @@ section {
     padding: 10px 0;
   }
 }
-.news button {
+.news .button-sort, .news .button-filtr {
   margin: 4px;
   padding: 7px;
   font-size: 0.7rem;
@@ -887,7 +925,8 @@ section {
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
   outline: 0;
 }
-.news button svg {
+.news .button-sort svg, .news .button-filtr svg {
+  margin-right: 6px;
   fill: #000;
 }
 .news .activeButton {
@@ -926,6 +965,9 @@ section {
 .news .posts footer {
   padding: 10px;
   color: #333;
+}
+.news .svg-icon {
+  margin-right: 6px;
 }
 
 .post {
@@ -1011,7 +1053,20 @@ section {
   width: 50%;
 }
 
-footer {
+.footer-main {
   background: #333;
   color: #fff;
+  border-top: 5px solid #c0c0c0;
+  padding: 20px 0px;
+  text-align: center;
+}
+.footer-main .svg-icon-smartphone svg {
+  fill: #c0c0c0;
+}
+.footer-main .svg-icon-mail svg {
+  fill: #c0c0c0;
+}
+.footer-main .mail, .footer-main .phone, .footer-main .up-top {
+  display: inline-block;
+  margin: 5px;
 }

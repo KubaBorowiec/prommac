@@ -1,0 +1,6 @@
+Bootstrap 
+Angular 1.7
+HTML 5 
+
+corssbrower
+IE > 10

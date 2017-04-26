@@ -22,13 +22,12 @@ app.directive('addClass', function() {
       }
   };
 });
-app.directive('upTop', function() {
+app.directive('moveTo', function() {
   return {
-      restrict: 'AE',
-      template:'<button class="upTop">up</button>',
+      restrict: 'A',
       link: function(scope, element,attr) {
            element.on('click', function() {
-                $("body").animate({scrollTop: document.getElementById(attr.where).offsetTop}, "slow");
+                $("body").animate({scrollTop: document.getElementById(attr.moveTo).offsetTop}, "slow");
           });
       }
   };

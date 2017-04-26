@@ -63,8 +63,8 @@ app.directive('countDown', function(){
               minutesLeft: parseInt(e.seconds%86400%3600/60),
               secondsLeft: parseInt(e.seconds%86400%3600%60)
             }
-            element.text(e.timeTillEvent.daysLeft+' d, '+e.timeTillEvent.hoursLeft+' h, '+ e.timeTillEvent.minutesLeft + ' m, ' +
-             e.timeTillEvent.secondsLeft + ' s ')
+            element.text(e.timeTillEvent.daysLeft+'d '+e.timeTillEvent.hoursLeft+'h '+ e.timeTillEvent.minutesLeft + 'm ' +
+             e.timeTillEvent.secondsLeft + 's ')
         };
 
         setInterval(function () {

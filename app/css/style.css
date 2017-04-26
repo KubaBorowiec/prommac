@@ -7,6 +7,7 @@
  * 3. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import "//fonts.googleapis.com/css?family=Bangers";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -833,8 +834,9 @@ section {
   padding: 10px 0;
   background-color: #fff;
   color: #820407;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  font-family: 'Bangers';
   text-align: center;
 }
 .start .banner .buy-ticket {

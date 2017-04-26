@@ -7,5 +7,6 @@ app.config(["$routeProvider",function($routeProvider){
 	$routeProvider.when("/about",{controller:"aboutController",templateUrl:"templates/about.html"}),
 	$routeProvider.when("/players",{controller:"playersController",templateUrl:"templates/players.html"}),
 	$routeProvider.when("/contact",{controller:"contactController",templateUrl:"templates/contact.html"}),
+	$routeProvider.when("/fightcard",{controller:"fightcard",templateUrl:"templates/fightcard.html"}),
 	$routeProvider.otherwise({redirectTo:"/"})}]);
 

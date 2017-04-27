@@ -4,16 +4,49 @@
 	border-top:5px solid #c0c0c0;
 	padding:20px 0px;
 	text-align:center;
-	.svg-icon-smartphone{
+	.svg-icon-small{
+		margin-right:6px;
 		svg{
 			fill:#c0c0c0;}
 	}
-	.svg-icon-mail{
-		svg{
-			fill:#c0c0c0;}
+	.svg-icon-smartphone{
+		margin-right:2px;
 	}
 	.mail, .phone, .up-top{
 		display:inline-block;
 		margin:5px;
+	}
+	.social-block{
+		.text{
+			text-transform: uppercase;
+		}
+		.svg-icon-fb{
+			svg{
+				fill:#3b5998;
+			}
+		}
+		.svg-icon-twitter{
+			svg{
+				fill:#1dcaff
+			}
+		}
+		.svg-icon-instagram{
+			svg{
+				fill:#fcaf45;
+			}
+		}
+		li{
+			display:inline-block;
+			padding:10px;
+			-moz-transition: all 1s ease;
+			-webkit-transition: all 1s ease;
+			-o-transition: all 1s ease;
+			transition: all 1s ease;
+		}
+		li:hover{
+			-ms-transform: rotate(360deg); /* IE 9 */
+		    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+		    transform: rotate(360deg);
+		}
 	}
 }

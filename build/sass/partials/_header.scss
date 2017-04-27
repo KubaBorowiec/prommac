@@ -2,7 +2,7 @@ $color-toggle:transparent;
 $color-toggle-acitve:transparent;
 $size:40px;
 $htOfLine:2px;
-$colorLine:$main-color;
+$colorLine:$main-color-second;
 
 .c-hamburger {
   display: block;
@@ -138,18 +138,18 @@ header{
           a{
             display:block;
             color:#fff;
-            font-size:1.0rem;
+            font-size:0.9rem;
             text-transform: uppercase;
-            padding:5px 0;
+            padding:7px 0;
             text-decoration: none;
             @media only screen and (min-width: $br-tablet) {
-                font-size:1.0rem;
-                padding: 15px 0;
+                font-size:0.9rem;
+                padding: 9px 0;
                 text-transform: capitalize;
             }
           }
           .active{
-            color:$main-color;
+            color:$main-color-second;
             @media only screen and (min-width: $br-tablet) {
               color:#fff;
               background: #cb1b30;

@@ -1,0 +1,110 @@
+$timeAnimation: 40s; 
+$delayAnimation: 3s;
+$slideNumber:2;
+$timePertage:0.2;
+
+$urlScr:'../images/';
+#rotator{
+          position:relative;
+}
+        ul, li{
+          margin:0;
+          padding:0;
+        }
+        ul{
+          list-style: none;
+        }
+.rotator-top{
+             z-index:0;
+             width:100%;
+             height:100%;
+             -webkit-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
+             -moz-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
+             -o-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
+             -ms-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
+             animation: imageAnimation  $timeAnimation infinite ease-out $delayAnimation;
+            li{ 
+                top:0;
+                width:100%;
+                min-height:360px;
+                height:100%;
+                background-repeat: no-repeat;
+           }
+           @for $i from 0 through $slideNumber{
+             li:nth-child(#{$i+1}) {
+              $t:#{$i*100};
+              transform: translateX($t + '%');
+              background-image: url(../images/slider/img_#{$i+1}_1.jpg);}
+            }
+            li:nth-child(#{$slideNumber+1}){
+                $r: #{$slideNumber*100};
+                transform: translateX($r + '%');
+                background-image: url(../images/slider/img_1_1.jpg);
+            }
+        }
+         /*last child musi miec takie samo tło jak first child */
+       $czas:(100/$slideNumber);
+       $timeslide:$timePertage * $czas;
+       $stop: ( 1 - $timePertage ) * $czas;
+       .rotator-top{
+           bottom:$timeslide;
+           top:$stop;
+       }
+
+@keyframes imageAnimation {
+  0% {
+    transform: translateX(0); }
+  20% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(-100%); }
+  70% {
+    transform: translateX(-100%); }
+  80% {
+    transform: translateX(-200%); }
+  100% {
+    transform: translateX(-200%); }
+ } 
+
+@-webkit-keyframes imageAnimation {
+  0% {
+    transform: translateX(0); }
+  20% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(-100%); }
+  70% {
+    transform: translateX(-100%); }
+  80% {
+    transform: translateX(-200%); }
+  100% {
+    transform: translateX(-200%); }
+ } 
+@-o-keyframes imageAnimation {
+  0% {
+    transform: translateX(0); }
+  20% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(-100%); }
+  70% {
+    transform: translateX(-100%); }
+  80% {
+    transform: translateX(-200%); }
+  100% {
+    transform: translateX(-200%); }
+ }  
+@-moz-keyframes imageAnimation {
+  0% {
+    transform: translateX(0); }
+  20% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(-100%); }
+  70% {
+    transform: translateX(-100%); }
+  80% {
+    transform: translateX(-200%); }
+  100% {
+    transform: translateX(-200%); }
+ } 

@@ -1,47 +1,46 @@
 h2
-	| Aktualności
+		| Aktualności
 div
-	div(class="sort")
-					button.button-sort.date(ng-click="sortBy('date')" add-class="activeButton") 
-						svg-icon(type="clock" class="svg-icon svg-icon-clock")
-						| Data
-					//-button(ng-click="sortBy('title')")
-						| Tytuł
-					button.button-filtr.figth(ng-click="myFilter = {cat:'walka'}" add-class="activeButton")
-						svg-icon(type="fist" class="svg-icon svg-icon-fist" )
-						| Walka
-					button.button-filtr(ng-click="myFilter = {cat:'media'}" add-class="activeButton")
-						svg-icon(type="microphone" class="svg-icon svg-icon-microphone")
-						| Media
-					button.button-filtr(ng-click="myFilter = {cat:'zawodnicy'}" add-class="activeButton")
-						svg-icon(type="boxer" class="svg-icon svg-icon-boxer")
-						| Zawodnicy
-					button.button-filtr(ng-click="myFilter ='' " class="activeButton" add-class="activeButton")
-						svg-icon(type="tick" class="svg-icon svg-icon-tick")
-						| Wszystkie
-	div.container
-		div.row
-			div(class="id-{{post.id}} posts col-xs-12 col-md-6 col-lg-4" ng-repeat="post in posts | orderBy:sorting | filter:myFilter | limitTo:itemsPerPage:begin")
-					header
-						h3 {{post.title}}		        
-					article
-								img(ng-src="images/posts/{{post.src}}")
-					footer(class="grey clearfix")
-								div.row
-									div(class="pull-left text-left col-xs-6")
-										span
-											svg-icon(type="clock" class="svg-icon svg-icon-clock") 
-											| {{post.date | date:"MM/dd/yyyy" }}
-									div(class="pull-right text-right cat cat-{{post.cat}} col-xs-6") 
-											| Kategoria: 
-											span 
-												| {{post.cat}}
-								div.row
-									div(class="pull-left text-left col-xs-6")
-											svg-icon(type="person" class="svg-icon svg-icon-person") 
-											span {{post.author}}
-									a.read-more(class="pull-right text-right col-xs-6" ng-href="#news/{{post.slug}}")
-											span.text
-												| Czytaj więcej
-											span.icon
-												svg-icon(type="arrow-right" class="svg-icon-arrow-right svg-icon-small")
+		div.sort.row
+						button.button-sort.date(ng-click="sortBy('date')" add-class="activeButton") 
+							svg-icon(type="clock" class="svg-icon-normal svg-icon-clock")
+							| Data
+						//-button(ng-click="sortBy('title')")
+							| Tytuł
+						button.button-filtr.figth(ng-click="myFilter = {cat:'walka'}" add-class="activeButton")
+							svg-icon(type="punch" class="svg-icon-normal svg-icon-punch" )
+							| Walka
+						button.button-filtr(ng-click="myFilter = {cat:'media'}" add-class="activeButton")
+							svg-icon(type="microphone" class="svg-icon-normal svg-icon-microphone")
+							| Media
+						button.button-filtr(ng-click="myFilter = {cat:'zawodnicy'}" add-class="activeButton")
+							svg-icon(type="boxer" class="svg-icon-normal svg-icon-boxer")
+							| Zawodnicy
+						button.button-filtr(ng-click="myFilter ='' " class="activeButton" add-class="activeButton")
+							svg-icon(type="tick" class="svg-icon-normal svg-icon-tick")
+							| Wszystkie
+			div.container
+				div.row
+					div(class="id-{{post.id}} posts col-xs-12 col-md-6 col-lg-4" ng-repeat="post in posts | orderBy:sorting | filter:myFilter | limitTo:itemsPerPage:begin")
+						header
+							h3 {{post.title}}		        
+						article
+									img(ng-src="images/posts/{{post.src}}")
+						footer(class="grey clearfix")
+									div.row.top
+										div(class="pull-left text-left col-xs-6")
+											span
+												svg-icon(type="clock" class="svg-icon-small svg-icon-clock") 
+												| {{post.date | date:"MM/dd/yyyy" }}
+										div(class="pull-right text-right cat cat-{{post.cat}} col-xs-6") 
+												span 
+													| {{post.cat}}
+									div.row.bottom
+										div(class="pull-left text-left col-xs-6")
+												svg-icon(type="person" class="svg-icon-small svg-icon-person") 
+												span {{post.author}}
+										a.read-more(class="pull-right text-right col-xs-6" ng-href="#news/{{post.slug}}")
+												span.text
+													| Czytaj więcej
+												span.icon
+													svg-icon(type="arrow-right" class="svg-icon-arrow-right svg-icon-small")

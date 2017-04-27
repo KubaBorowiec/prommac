@@ -1,12 +1,19 @@
-.container
+div.container-fluid
 	div.row
 		div(class="gray margin-top-20 clearfix")
 					div(class="col-md-4")
 						h3 Partnerzy główni
 	div(class="row")
-		div(class="col-sm-8")
-			slider(images="images")
-		div.col-sm-4
+		div.col-md-8
+			div#rotator
+				ul.rotator-top
+					li 
+						img(src="images/slider/img_1_1.jpg")
+					li 
+						img(src="images/slider/img_2_1.jpg")
+					li 
+						img(src="images/slider/img_1_1.jpg")
+		div.col-md-4
 			div.banner
 				div.logo
 					img(src="images/logo.png") 
@@ -21,7 +28,10 @@
 								| START 19:00
 				div.time(date="March 3, 2018 19:00:00" class="count-down")
 				div.buy-ticket
-					button KUP BILET
+					button 
+						| KUP BILET
+						svg-icon(type="ticket" class="svg-icon-ticket svg-icon")
+						
 
 
 

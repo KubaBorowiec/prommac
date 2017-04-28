@@ -1,43 +1,21 @@
-div.container-fluid
-	div.row
-		div(class="gray margin-top-20 clearfix")
-					div(class="col-md-4")
-						h3 Partnerzy główni
+div.container
 	div(class="row")
 		div.col-md-8
 			#slides
-					#overflow
-						.inner
-							article
-								.info
-									h3 Cloud Dragon
-									|  by 
-									a(href='http://voyager3.tumblr.com') Brendan Zabarauskas
-								img(src='http://csscience.com/responsiveslidercss3/CouldDragonByBjzaba.png')
-							article
-								.info
-									h3 Mountain Fort
-									|  by 
-									a(href='http://voyager3.tumblr.com') Brendan Zabarauskas
-								img(src='http://csscience.com/responsiveslidercss3/MountainFortByBjzaba.png')
-							article
-								.info
-									h3 Mountain Outpost
-									|  by 
-									a(href='http://voyager3.tumblr.com') Brendan Zabarauskas
-								img(src='http://csscience.com/responsiveslidercss3/MountainOutpostByBjzaba.png')
-							article
-								.info
-									h3 Cliffs
-									|  by 
-									a(href='http://voyager3.tumblr.com') Brendan Zabarauskas
-								img(src='http://csscience.com/responsiveslidercss3/CliffsByBjzaba.png')
-							article
-								.info
-									h3 Hill Fort
-									|  by 
-									a(href='http://voyager3.tumblr.com') Brendan Zabarauskas
-								img(src='http://csscience.com/responsiveslidercss3/HillFortByBjzaba.png')
+					.overflow
+						input.first(type="radio" id="slide1" checked="checked" name="slides")
+						input.second(type="radio" id="slide2" name="slides")
+						.inner		
+							div.slide
+								span.desc
+								img(src='images/slider/img01.jpg')
+							
+							div.slide
+								span.desc
+								img(src='images/slider/img02.jpg')
+						.controlls
+							label(for="slide1") 1
+							label(for="slide2") 2
 		div.col-md-4
 			div.banner
 				div.logo

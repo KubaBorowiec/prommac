@@ -7,10 +7,12 @@ html(lang='pl' data-ng-app="PrommacApp")
 		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
 		link(href='css/style.css', type='text/css', rel='stylesheet')
 	body(ng-class="{'activeMobile': isActiveMobile}" ng-controller="mainController")
-			include header.jade
-			main#top
+			header.main-header.container(ng-controller="headerController")
+				include header.jade
+			main#top.container
 				section(ng-view class="{{pageClass}}")
-			include footer.jade
+			footer#footer-main.container
+				include footer.jade
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js")
 	script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js")

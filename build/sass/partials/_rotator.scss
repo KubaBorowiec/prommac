@@ -1,321 +1,77 @@
-$timeAnimation: 40s; 
-$delayAnimation: 3s;
-$slideNumber:2;
-$timePertage:0.2;
-
-$urlScr:'../images/';
-#rotator{
-          position:relative;
-}
-        ul, li{
-          margin:0;
-          padding:0;
-        }
-        ul{
-          list-style: none;
-        }
-.rotator-top{
-             z-index:0;
-             width:100%;
-             height:100%;
-             -webkit-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
-             -moz-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
-             -o-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
-             -ms-animation: imageAnimation $timeAnimation infinite ease-out $delayAnimation;
-             animation: imageAnimation  $timeAnimation infinite ease-out $delayAnimation;
-            li{ 
-                top:0;
-                width:100%;
-                min-height:360px;
-                height:100%;
-                background-repeat: no-repeat;
-           }
-           @for $i from 0 through $slideNumber{
-             li:nth-child(#{$i+1}) {
-              $t:#{$i*100};
-              transform: translateX($t + '%');
-              background-image: url(../images/slider/img_#{$i+1}_1.jpg);}
-            }
-            li:nth-child(#{$slideNumber+1}){
-                $r: #{$slideNumber*100};
-                transform: translateX($r + '%');
-                background-image: url(../images/slider/img_1_1.jpg);
-            }
-        }
-         /*last child musi miec takie samo tło jak first child */
-       $czas:(100/$slideNumber);
-       $timeslide:$timePertage * $czas;
-       $stop: ( 1 - $timePertage ) * $czas;
-       .rotator-top{
-           bottom:$timeslide;
-           top:$stop;
-       }
-
-@keyframes imageAnimation {
-  0% {
-    transform: translateX(0); }
-  20% {
-    transform: translateX(0); }
-  30% {
-    transform: translateX(-100%); }
-  70% {
-    transform: translateX(-100%); }
-  80% {
-    transform: translateX(-200%); }
-  100% {
-    transform: translateX(-200%); }
- } 
-
-@-webkit-keyframes imageAnimation {
-  0% {
-    transform: translateX(0); }
-  20% {
-    transform: translateX(0); }
-  30% {
-    transform: translateX(-100%); }
-  70% {
-    transform: translateX(-100%); }
-  80% {
-    transform: translateX(-200%); }
-  100% {
-    transform: translateX(-200%); }
- } 
-@-o-keyframes imageAnimation {
-  0% {
-    transform: translateX(0); }
-  20% {
-    transform: translateX(0); }
-  30% {
-    transform: translateX(-100%); }
-  70% {
-    transform: translateX(-100%); }
-  80% {
-    transform: translateX(-200%); }
-  100% {
-    transform: translateX(-200%); }
- }  
-@-moz-keyframes imageAnimation {
-  0% {
-    transform: translateX(0); }
-  20% {
-    transform: translateX(0); }
-  30% {
-    transform: translateX(-100%); }
-  70% {
-    transform: translateX(-100%); }
-  80% {
-    transform: translateX(-200%); }
-  100% {
-    transform: translateX(-200%); }
- } 
-
-
-@import "compass/css3";
-
-label, a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-label, #active, img { -moz-user-select:none;-webkit-user-select:none; }
-#slider {
-  margin: 0 auto;
-}
-
-
-/* NEW EXPERIMENT */
-/* Slider Setup */
-
-input {
-  display: none;
-}
-
-#slide1:checked ~ #slides .inner { margin-left:0; }
-#slide2:checked ~ #slides .inner { margin-left:-100%; }
-#slide3:checked ~ #slides .inner { margin-left:-200%; }
-#slide4:checked ~ #slides .inner { margin-left:-300%; }
-#slide5:checked ~ #slides .inner { margin-left:-400%; }
-
-#overflow {
-  width: 100%;
-  overflow: hidden;
-}
-
-article img {
-  width: 100%;
-}
-
-#slides .inner {
-  width: 500%;
-}
-
-#slides article {
-  width: 20%;
-  float: left;
-}
-
-/* Slider Styling */
-
-/* Control Setup */
-
-#controls {
-  margin: -25% 0 0 0;
-  width: 100%;
-  height: 50px;
-}
-
-#controls label { 
-  width: 50px;
-  height: 50px;
-  opacity: 0.3;
-  &:hover { opacity: 0.8; }
-}
-
-#slide1:checked ~ #controls label:nth-child(2), 
-#slide2:checked ~ #controls label:nth-child(3), 
-#slide3:checked ~ #controls label:nth-child(4), 
-#slide4:checked ~ #controls label:nth-child(5), 
-#slide5:checked ~ #controls label:nth-child(1) {
-  background: url('http://csscience.com/responsiveslidercss3/next.png') no-repeat;
-  float: right;
-  margin: 0 -70px 0 0;
-  display: block;
-}
-
-
-#slide1:checked ~ #controls label:nth-child(5),
-#slide2:checked ~ #controls label:nth-child(1),
-#slide3:checked ~ #controls label:nth-child(2),
-#slide4:checked ~ #controls label:nth-child(3),
-#slide5:checked ~ #controls label:nth-child(4) {
-  background: url('http://csscience.com/responsiveslidercss3/prev.png') no-repeat;
-  float: left;
-  margin: 0 0 0 -70px;
-  display: block;
-}
-
-/* Info Box */
-
-.info {
-  line-height: 20px;
-  margin: 0 0 -150%;
-  position: absolute;
-  padding: 30px 30px;
-  opacity: 0;
-  text-align: left;
-}
-
-.info h3 {
-  margin: 0 0 5px;
-  font-size: 22px;
-  font-style: normal;
-}
-
-
-/* Animation */
-
-#slides .inner {
-  -webkit-transform: translateZ(0);
-  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
-
-  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
-}
-
-#slider {
-  -webkit-transform: translateZ(0);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-#controls label{
-  -webkit-transform: translateZ(0);
-  -webkit-transition: opacity 0.2s ease-out;
-  -moz-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
-}
-
-#slide1:checked ~ #slides article:nth-child(1) .info,
-#slide2:checked ~ #slides article:nth-child(2) .info,
-#slide3:checked ~ #slides article:nth-child(3) .info,
-#slide4:checked ~ #slides article:nth-child(4) .info,
-#slide5:checked ~ #slides article:nth-child(5) .info {
-  opacity: 1;
-  -webkit-transition: all 1s ease-out 0.6s;
-  -moz-transition: all 1s ease-out 0.6s;
-  -o-transition: all 1s ease-out 0.6s;
-  transition: all 1s ease-out 0.6s;
-}
-
-.info, #controls, #slides, #active, #active label, .info h3 {
-  -webkit-transform: translateZ(0);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-/* Responsive Styling */
-
-
-@media only screen and (max-width: 850px) and (min-width: 450px) {
-
-  #slider #controls {
-    margin: -25% 0 0 15%;
-    width: 70%;
-    height: 50px;
+$timeAnimation:20s;
+$delayAnimation:20s;
+#slides {
+  position:relative;
+  .overflow {
+    width: 100%;
+    overflow: hidden;
   }
-
-  #slider #controls label {
-    -moz-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -o-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
+  .inner {
+      width: 500%;
+      transition: all ease-in-out 1s;
+      transform: translateX(0%);
   }
-
+  input[type="radio"]{
+    display:none;    
+  }
+  .slide{
+    width: 20%;
+    float: left;
+    animation: imageAnimation  $timeAnimation infinite ease-out $delayAnimation;
+    img {
+      width: 100%;
+    }
+  }
+  .overflow > input:nth-of-type(1):checked ~ .inner{
+      transform: translateX(0%);
+  }
+  .overflow > input:nth-of-type(2):checked ~ .inner{
+      transform: translateX(-20%);
+  }
+  //CONTROLS 
+  .controlls{
+    position:absolute;
+    bottom:2px;
+    left:2px;
+    width:100%;
+    height:24px;
+    text-align:left;
+    label{
+        display:inline-block;
+        padding:2px 7px;
+        margin:0 6px 0 0px;
+        font-size:0.7rem;
+        color:#fff;
+        background:transparent;
+        border:1px solid #fff;
+        cursor:pointer;
+        transition:all 0.2s;
+    }
+  }
+  // Active controlls
+  .overflow > input:nth-of-type(1):checked ~ .controlls label:nth-of-type(1){
+     background: #024589;
+  }
+  .overflow > input:nth-of-type(2):checked ~ .controlls label:nth-of-type(2){
+    background: #024589;
+  }
+    
 }
 
-@media only screen and (max-width: 450px) {
-
-  #slider #controls {
-    margin: -28% 0 0 24%;
-    width: 50%;
-    height: 50px;
-  }
-
-  #slider #slides {
-    padding: 1% 0;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-  }
-
-  #slider #controls label {
-    -moz-transform: scale(0.6);
-    -webkit-transform: scale(0.6);
-    -o-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    transform: scale(0.6);
-  }
-
+@keyframes movingAnimation  {
+    10%{
+       transform: translateX(0%);
+    }
+    40%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    90%{
+        transform: translateX(0%);
+    }
 }
 
 
-@media only screen and (min-width: 850px) {
 
-  body {
-    padding: 0 80px;
-  }
-}

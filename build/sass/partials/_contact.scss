@@ -5,22 +5,32 @@
 	}
 	label{
 		display:block;
-		margin:10px 0;
+		margin:17px 0 3px 0;
+		font-size:0.7rem;
+		font-weight: normal;
 	}
 	input[type="text"],textarea{
 		width:100%;
-		padding:5px;
+		padding:10px 5px;
+		background: #F5F5F5;
+		border:1px solid #c0c0c0;
+
 	}
 	input[type="submit"]{
+		display:block;
+		width:100%;
+	    margin: 17px auto;
+	    padding: 10px;
 		background-color: $main-color;
-		-webkit-appearance: none;
-   		-moz-appearance:  none; 
-  		appearance:   none;  
-        border:none;
-        border: none;
-    	padding: 11px;
-        color: #fff;
-        margin: 10px 0;
-        width: 50%;
+	    color: #fff;
+    	text-transform: uppercase;
+	    border: none;
+	    border-radius: 11px;
+	    -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+    	-moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+    	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.6);
+	}
+	.red{
+		color:$main-color;
 	}
 }

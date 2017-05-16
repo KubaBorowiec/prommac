@@ -3,11 +3,17 @@ h2
 form
 	label
 		| Imię i nazwisko
-	input(type="text" name="fname")
+		span.red *
+	div.error
+	input(type="text" name="fname" ng-blur="check-name")
 	label
 		| E-mail
-	input(type="text" name="fname")
+		span.red *
+	div.error
+	input(type="text" name="fname" ng-blur="check-mail")
 	label
-		| Treśc wiadomości
+		| Treść wiadomości
+		span.red *
+	div.error
 	textarea()
-	input(type="submit")
+	input(ng-click="validate" type="submit" value="Wyślij") 

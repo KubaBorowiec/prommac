@@ -1159,10 +1159,17 @@ header .activeMobile nav {
   width: 70px;
   height: 70px;
 }
-.contact .people {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-top: 1px solid #333;
+.contact .people .title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+.contact .people::before {
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: #333;
+  margin: 0 -30px 15px -30px;
 }
 .contact .person {
   margin-bottom: 10px;
@@ -1191,7 +1198,7 @@ header .activeMobile nav {
   font-weight: bold;
   text-align: right;
 }
-.contact .red + .message {
+.contact .notvalid + .message {
   color: #820407;
 }
 

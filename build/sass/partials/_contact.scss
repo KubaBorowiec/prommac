@@ -49,9 +49,18 @@
 		height:70px;
 	}
 	.people{
-		padding-top:15px;
-		padding-bottom:15px;
-		border-top:1px solid #333;
+		.title{
+			margin-top:5px;
+			margin-bottom:5px;
+			font-size:0.9rem;
+		}
+		&::before{
+			display:block;
+			content:"";
+			height:1px;
+			background-color:#333;
+			margin:0 -30px 15px -30px; 
+		}
 	}
 	.person{
 		margin-bottom:10px;
@@ -80,13 +89,7 @@
 		font-weight:bold;
 		text-align:right;
 	}
-	input.red{
-		
-	}
-	input.green{
-		
-	}
-	.red + .message{
+	.notvalid + .message{
 		color:$main-color;
 	}
 

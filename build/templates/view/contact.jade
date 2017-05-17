@@ -1,19 +1,50 @@
 h2
 	| Napisz do nas 
-form
-	label
-		| Imię i nazwisko
-		span.red *
-	div.error
-	input(type="text" name="fname" ng-blur="check-name")
-	label
-		| E-mail
-		span.red *
-	div.error
-	input(type="text" name="fname" ng-blur="check-mail")
-	label
-		| Treść wiadomości
-		span.red *
-	div.error
-	textarea()
-	input(ng-click="validate" type="submit" value="Wyślij") 
+div.container
+	div.col-xs-12.col-md-6
+		form
+			div
+				label
+					| Imię i nazwisko
+					span.red *
+				input(type="text" class="required name" name="name" ng-blur="check('name')")
+				div.message
+			div
+				label
+					| E-mail
+					span.red *
+				input(type="text" name="email" class="required email" ng-blur="check('email')")
+				div.message
+			div
+				label
+					| Treść wiadomości
+					span.red *
+				textarea(class="required content" ng-blur="check('content')")
+				div.message
+			input(ng-click="validate" type="submit" value="Wyślij") 
+	div.col-xs-12.col-md-6.people
+		div.row.person
+			div.col-xs-5
+				div.border.text-center
+						svg-icon(type="woman" class="svg-icon-woman")
+			div.col-xs-7
+				h3 Joanna Trzykowska
+				div.role
+							| PR
+				div.email
+					| E-mail: jt@example.zet <br/>
+					| Tel: 0048 000 000 000
+		div.row.person
+			div.col-xs-5
+				div.border.text-center
+						svg-icon(type="man" class="svg-icon-man")
+			div.col-xs-7
+				h3 Kamil Kowalski
+				div.role
+							| Media / Biuro
+				div.email
+					| E-mail: kk@example.zet <br/>
+					| Tel: 0048 000 000 000
+
+
+

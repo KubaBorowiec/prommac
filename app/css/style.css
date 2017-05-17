@@ -1115,11 +1115,11 @@ header .activeMobile nav {
   background-color: #fff;
 }
 .contact form {
-  padding: 15px;
+  padding-top: 10px;
 }
 .contact label {
   display: block;
-  margin: 17px 0 3px 0;
+  margin: 0px 0 3px 0;
   font-size: 0.7rem;
   font-weight: normal;
 }
@@ -1132,9 +1132,9 @@ header .activeMobile nav {
 .contact input[type="submit"] {
   display: block;
   width: 100%;
-  margin: 17px auto;
+  margin: 1px auto 15px auto;
   padding: 10px;
-  background-color: #820407;
+  background-color: #024589;
   color: #fff;
   text-transform: uppercase;
   border: none;
@@ -1146,8 +1146,57 @@ header .activeMobile nav {
 .contact .red {
   color: #820407;
 }
+.contact .svg-icon-woman .head {
+  fill: #419162;
+}
+.contact .svg-icon-woman .bottom {
+  fill: #fff;
+}
+.contact .svg-icon-man {
+  fill: #000;
+}
+.contact .svg-icon-man, .contact .svg-icon-woman {
+  width: 70px;
+  height: 70px;
+}
+.contact .people {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #333;
+}
+.contact .person {
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+}
+.contact .person h3 {
+  margin: 0 0 2px 0;
+  font-size: 0.75rem;
+  color: #333;
+}
+.contact .person .role {
+  margin-bottom: 3px;
+  color: #000;
+}
+.contact .person .border {
+  padding: 5px;
+  background-color: #c0c0c0;
+}
+.contact .person .email {
+  font-size: 0.7rem;
+}
+.contact .message {
+  margin-top: 2px;
+  min-height: 0.66rem;
+  font-size: 0.66rem;
+  font-weight: bold;
+  text-align: right;
+}
+.contact .red + .message {
+  color: #820407;
+}
 
 .footer-main {
+  font-size: 0.67rem;
   background: #333;
   color: #fff;
   border-top: 5px solid #c0c0c0;
